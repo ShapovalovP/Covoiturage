@@ -189,7 +189,7 @@ namespace ProjetCovoiturage.Controllers
                     }
                     UserManager.AddToRole(user.Id, "Client");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("FiltreTrajets", "Trajets");
                 }
                 AddErrors(result);
             }

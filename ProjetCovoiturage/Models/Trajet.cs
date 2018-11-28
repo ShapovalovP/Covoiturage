@@ -50,7 +50,7 @@ namespace ProjetCovoiturage.Models
 
         // [Display(Name = "NbPassagers", ResourceType = typeof(Resources.Models.Trajet))]
         // [Required(ErrorMessageResourceName = "NbPassagersError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
-        public int NbPassagers { get; set; }
+       // public int NbPassagers { get; set; }
 
         public virtual ICollection<Client> Client { get; set; }
         public virtual Chauffeur Chauffeur { get; set; }

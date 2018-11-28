@@ -64,7 +64,7 @@ namespace ProjetCovoiturage.Services
                 moyenneApreci = "4.5",///Pomeniat!!! moyennes des appréciations de ses clients 1 ) sozdat tablicy Apreciation c itTarjet 
                 HeureDepart = trajCourant.HeureDepart,
                 HeureArrivee = trajCourant.HeureArrivee,
-                NbPassagers = trajCourant.NbPassagers,
+                NbPassagers = trajCourant.PlaceRestante,
                 Prix = trajCourant.Prix,
                 Kilometrage = trajCourant.Kilometrage,
                 VilleDepart = trajCourant.VilleDepart,

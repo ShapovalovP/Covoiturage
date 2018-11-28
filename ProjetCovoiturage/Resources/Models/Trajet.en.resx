@@ -136,7 +136,7 @@
     <value>The id is required</value>
   </data>
   <data name="NbPassagers" xml:space="preserve">
-    <value>Number of passengers</value>
+    <value>Number of remaining places</value>
   </data>
   <data name="NbPassagersError" xml:space="preserve">
     <value>The number of passengers is required</value>

@@ -9,107 +9,118 @@
 <div>
     <h4>VMChauffeurDeTrajet</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.nbTrajets)
-        </dt>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Chauffeur</h2>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.nbTrajets):
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.nbTrajets)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.nbTrajets)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.nbKilometres)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.nbKilometres):
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.nbKilometres)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.nbKilometres)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.moyenneApreci)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.moyenneApreci):
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.moyenneApreci)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.moyenneApreci)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.VilleDepart)
-        </dt>
+            </dl>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.VilleDepart)
-        </dd>
+        <div class="col-md-6">
+            <h2>Trajet</h2>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.VilleDepart)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PointDepart)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.VilleDepart)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PointDepart)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PointDepart)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PointArrive)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PointDepart)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PointArrive)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PointArrive)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Prix)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PointArrive)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Prix)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.VilleDestination)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.VilleDestination)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.VilleDestination)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HeureDepart)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.VilleDestination)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.HeureDepart)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.HeureDepart)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HeureArrivee)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.HeureDepart)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.HeureArrivee)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.HeureArrivee)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NbPassagers)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.HeureArrivee)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.NbPassagers)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.NbPassagers)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Kilometrage)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.NbPassagers)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Kilometrage)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Kilometrage)
+                </dt>
 
-    </dl>
-</div>
-<p>
-    @* @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
-    @Html.ActionLink("Back to List", "FiltreTrajets")
-</p>
+                <dd>
+                    @Html.DisplayFor(model => model.Kilometrage)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Prix)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Prix)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+    <p>
+        @* @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
+        @Html.ActionLink("Back to List", "FiltreTrajets")
+    </p>
 

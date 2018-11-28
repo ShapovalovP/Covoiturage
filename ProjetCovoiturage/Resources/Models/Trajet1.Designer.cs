@@ -61,11 +61,29 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Affisher.
+        /// </summary>
+        public static string btnAfficher {
+            get {
+                return ResourceManager.GetString("btnAfficher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Heure d&apos;arrivée.
         /// </summary>
         public static string HeurArrive {
             get {
                 return ResourceManager.GetString("HeurArrive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Heure d&apos;arrivée.
+        /// </summary>
+        public static string HeurArrive1 {
+            get {
+                return ResourceManager.GetString("HeurArrive1", resourceCulture);
             }
         }
         
@@ -79,11 +97,29 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à L&apos;heur d&apos;arrivée  est requis.
+        /// </summary>
+        public static string HeurArriveError1 {
+            get {
+                return ResourceManager.GetString("HeurArriveError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Heure de départ.
         /// </summary>
         public static string HeurDepart {
             get {
                 return ResourceManager.GetString("HeurDepart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Heure de départ.
+        /// </summary>
+        public static string HeurDepart1 {
+            get {
+                return ResourceManager.GetString("HeurDepart1", resourceCulture);
             }
         }
         
@@ -97,11 +133,29 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à L&apos;heure de depart  est requis.
+        /// </summary>
+        public static string HeurDepartError1 {
+            get {
+                return ResourceManager.GetString("HeurDepartError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Numéro de  trajet.
         /// </summary>
         public static string idTrajet {
             get {
                 return ResourceManager.GetString("idTrajet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Numéro de  trajet.
+        /// </summary>
+        public static string idTrajet1 {
+            get {
+                return ResourceManager.GetString("idTrajet1", resourceCulture);
             }
         }
         
@@ -115,11 +169,65 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Nombre de passagers.
+        ///   Recherche une chaîne localisée semblable à L&apos;id est requis.
+        /// </summary>
+        public static string idTrajetError1 {
+            get {
+                return ResourceManager.GetString("idTrajetError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Kilometrage.
+        /// </summary>
+        public static string Kilometrage {
+            get {
+                return ResourceManager.GetString("Kilometrage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Kilometrage est requis.
+        /// </summary>
+        public static string KilometrageError {
+            get {
+                return ResourceManager.GetString("KilometrageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Moyennes des appréciations de ses clients.
+        /// </summary>
+        public static string moyenneApreci {
+            get {
+                return ResourceManager.GetString("moyenneApreci", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre total de kilomètres.
+        /// </summary>
+        public static string nbKilometres {
+            get {
+                return ResourceManager.GetString("nbKilometres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de place restante.
         /// </summary>
         public static string NbPassagers {
             get {
                 return ResourceManager.GetString("NbPassagers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de passagers.
+        /// </summary>
+        public static string NbPassagers1 {
+            get {
+                return ResourceManager.GetString("NbPassagers1", resourceCulture);
             }
         }
         
@@ -133,11 +241,29 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le nombre de passegers  est requis.
+        /// </summary>
+        public static string NbPassagersError1 {
+            get {
+                return ResourceManager.GetString("NbPassagersError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Nombre de places disponibles.
         /// </summary>
         public static string NbPlacesDisponible {
             get {
                 return ResourceManager.GetString("NbPlacesDisponible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de places disponibles.
+        /// </summary>
+        public static string NbPlacesDisponible1 {
+            get {
+                return ResourceManager.GetString("NbPlacesDisponible1", resourceCulture);
             }
         }
         
@@ -151,11 +277,38 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le nombre de places disponible   est requis.
+        /// </summary>
+        public static string NbPlacesDisponibleError1 {
+            get {
+                return ResourceManager.GetString("NbPlacesDisponibleError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de trajets assurés.
+        /// </summary>
+        public static string nbTrajets {
+            get {
+                return ResourceManager.GetString("nbTrajets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Point d&apos;arrivée.
         /// </summary>
         public static string PointArrive {
             get {
                 return ResourceManager.GetString("PointArrive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Point d&apos;arrivée.
+        /// </summary>
+        public static string PointArrive1 {
+            get {
+                return ResourceManager.GetString("PointArrive1", resourceCulture);
             }
         }
         
@@ -169,11 +322,29 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le point d&apos;arrivée  est requis.
+        /// </summary>
+        public static string PointArriveError1 {
+            get {
+                return ResourceManager.GetString("PointArriveError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Point de départ.
         /// </summary>
         public static string PointDepart {
             get {
                 return ResourceManager.GetString("PointDepart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Point de départ.
+        /// </summary>
+        public static string PointDepart1 {
+            get {
+                return ResourceManager.GetString("PointDepart1", resourceCulture);
             }
         }
         
@@ -187,11 +358,29 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le point de depart  est requis.
+        /// </summary>
+        public static string PointDepartError1 {
+            get {
+                return ResourceManager.GetString("PointDepartError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Prix.
         /// </summary>
         public static string Prix {
             get {
                 return ResourceManager.GetString("Prix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Prix.
+        /// </summary>
+        public static string Prix1 {
+            get {
+                return ResourceManager.GetString("Prix1", resourceCulture);
             }
         }
         
@@ -205,11 +394,29 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le prix   est requis.
+        /// </summary>
+        public static string PrixError1 {
+            get {
+                return ResourceManager.GetString("PrixError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Ville de départ.
         /// </summary>
         public static string VilleDepart {
             get {
                 return ResourceManager.GetString("VilleDepart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Ville de départ.
+        /// </summary>
+        public static string VilleDepart1 {
+            get {
+                return ResourceManager.GetString("VilleDepart1", resourceCulture);
             }
         }
         
@@ -223,6 +430,15 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le ville  est requis.
+        /// </summary>
+        public static string VilleDepartError1 {
+            get {
+                return ResourceManager.GetString("VilleDepartError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Ville de destination.
         /// </summary>
         public static string VilleDestination {
@@ -232,11 +448,29 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Ville de destination.
+        /// </summary>
+        public static string VilleDestination1 {
+            get {
+                return ResourceManager.GetString("VilleDestination1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Le ville  est requis.
         /// </summary>
         public static string VilleDestinationError {
             get {
                 return ResourceManager.GetString("VilleDestinationError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le ville  est requis.
+        /// </summary>
+        public static string VilleDestinationError1 {
+            get {
+                return ResourceManager.GetString("VilleDestinationError1", resourceCulture);
             }
         }
     }
