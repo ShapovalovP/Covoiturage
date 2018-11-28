@@ -260,6 +260,7 @@
     <Compile Include="Services\ServiceTrajet.cs" />
     <Compile Include="Services\ServiceVoiture.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\VMChauffeurDeTrajet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-ProjetCovoiturage-20181119033914.mdf" />
@@ -430,7 +431,6 @@
     <Folder Include="bin\bin\en\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Validations\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

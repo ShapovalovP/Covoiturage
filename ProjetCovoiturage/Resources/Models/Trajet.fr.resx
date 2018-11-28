@@ -177,4 +177,82 @@
   <data name="VilleDestinationError" xml:space="preserve">
     <value>Le ville  est requis</value>
   </data>
+  <data name="btnAfficher" xml:space="preserve">
+    <value>Affisher</value>
+  </data>
+  <data name="HeureArrive1" xml:space="preserve">
+    <value>Heur d'arrivée</value>
+  </data>
+  <data name="HeureArriveError1" xml:space="preserve">
+    <value>L'heur d'arrivée  est requis</value>
+  </data>
+  <data name="HeureDepart1" xml:space="preserve">
+    <value>Heur d'départ</value>
+  </data>
+  <data name="HeureDepartError1" xml:space="preserve">
+    <value>L'heure de depart  est requis</value>
+  </data>
+  <data name="idTrajet1" xml:space="preserve">
+    <value>Numéro de  trajet</value>
+  </data>
+  <data name="idTrajetError1" xml:space="preserve">
+    <value>L'id est requis</value>
+  </data>
+  <data name="Kilometrage" xml:space="preserve">
+    <value>Kilometrage</value>
+  </data>
+  <data name="KilometrageError" xml:space="preserve">
+    <value>Kilometrage est requis</value>
+  </data>
+  <data name="moyenneApreci" xml:space="preserve">
+    <value>Moyennes des appréciations de ses clients</value>
+  </data>
+  <data name="nbKilometres" xml:space="preserve">
+    <value>Nombre total de kilomètres</value>
+  </data>
+  <data name="NbPassagers1" xml:space="preserve">
+    <value>Nombre de passagers</value>
+  </data>
+  <data name="NbPassagersError1" xml:space="preserve">
+    <value>Le nombre de passegers  est requis</value>
+  </data>
+  <data name="NbPlacesDisponible1" xml:space="preserve">
+    <value>Nombre de places disponibles</value>
+  </data>
+  <data name="NbPlacesDisponibleError1" xml:space="preserve">
+    <value>Le nombre de places disponible   est requis</value>
+  </data>
+  <data name="nbTrajets" xml:space="preserve">
+    <value>Nombre de trajets assurés</value>
+  </data>
+  <data name="PointArrive1" xml:space="preserve">
+    <value>Point d'arrivée</value>
+  </data>
+  <data name="PointArriveError1" xml:space="preserve">
+    <value>Le point d'arrivée  est requis</value>
+  </data>
+  <data name="PointDepart1" xml:space="preserve">
+    <value>Point de départ</value>
+  </data>
+  <data name="PointDepartError1" xml:space="preserve">
+    <value>Le point de depart  est requis</value>
+  </data>
+  <data name="Prix1" xml:space="preserve">
+    <value>Prix</value>
+  </data>
+  <data name="PrixError1" xml:space="preserve">
+    <value>Le prix   est requis</value>
+  </data>
+  <data name="VilleDepart1" xml:space="preserve">
+    <value>Ville de départ</value>
+  </data>
+  <data name="VilleDepartError1" xml:space="preserve">
+    <value>Le ville  est requis</value>
+  </data>
+  <data name="VilleDestination1" xml:space="preserve">
+    <value>Ville de destination</value>
+  </data>
+  <data name="VilleDestinationError1" xml:space="preserve">
+    <value>Le ville  est requis</value>
+  </data>
 </root>
