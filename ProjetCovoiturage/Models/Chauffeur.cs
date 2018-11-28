@@ -20,5 +20,6 @@ namespace ProjetCovoiturage.Models
         public DateTime DateEmbauche { get; set; }
         public virtual ICollection<Voiture> Voiture { get; set; }
         public virtual ICollection<NotesChauffeurs> NotesChauffeurs { get; set; }
+        public virtual ICollection<Trajet> Trajets { get; set; }
     }
 }
