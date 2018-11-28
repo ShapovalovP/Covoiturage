@@ -10,7 +10,7 @@ namespace ProjetCovoiturage.Services
 {
     public class ServiceTrajet : IServiceTrajet
     {
-        private UnitOfWork uw = new UnitOfWork(new ApplicationDbContext());;
+        private UnitOfWork uw = new UnitOfWork(new ApplicationDbContext());
 
         public ServiceTrajet(UnitOfWork _uw)
         {
