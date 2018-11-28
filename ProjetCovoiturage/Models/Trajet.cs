@@ -12,7 +12,7 @@ namespace ProjetCovoiturage.Models
         // [Display(Name = "idTrajet", ResourceType = typeof(Resources.Models.Trajet))]
         // [Required(ErrorMessageResourceName = "idTrajetError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
         public int Id { get; set; }
-
+        public string IdChauffeur { get; set; }
 
         // [Display(Name = "VilleDepart", ResourceType = typeof(Resources.Models.Trajet))]
         // [Required(ErrorMessageResourceName = "VilleDepartError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
@@ -43,6 +43,14 @@ namespace ProjetCovoiturage.Models
         // [Display(Name = "HeureArrivee", ResourceType = typeof(Resources.Models.Trajet))]
         // [Required(ErrorMessageResourceName = "HeureArriveError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
         public DateTime HeureArrivee { get; set; }
+
+        //  [Display(Name = "Kilometrage", ResourceType = typeof(Resources.Models.Trajet))]
+        //  [Required(ErrorMessageResourceName = "KilometrageError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
+        public int Kilometrage { get; set; }
+
+        // [Display(Name = "NbPassagers", ResourceType = typeof(Resources.Models.Trajet))]
+        // [Required(ErrorMessageResourceName = "NbPassagersError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
+        public int NbPassagers { get; set; }
 
         public virtual ICollection<Client> Client { get; set; }
         public virtual Chauffeur Chauffeur { get; set; }
