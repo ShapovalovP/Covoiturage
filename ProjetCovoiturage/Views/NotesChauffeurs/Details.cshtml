@@ -1,0 +1,66 @@
+﻿@model ProjetCovoiturage.Models.NotesChauffeurs
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NotesChauffeurs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.chauffeurId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chauffeurId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.notePonctualitée)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.notePonctualitée)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noteSecuritée)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noteSecuritée)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noteConfort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noteConfort)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noteCourtoisie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noteCourtoisie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noteFiabilitée)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noteFiabilitée)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.noteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
