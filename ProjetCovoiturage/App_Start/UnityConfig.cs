@@ -1,5 +1,8 @@
+using ProjetCovoiturage.Controllers;
+using ProjetCovoiturage.Services;
 using System.Web.Mvc;
 using Unity;
+using Unity.Injection;
 using Unity.Mvc5;
 
 namespace ProjetCovoiturage
@@ -16,6 +19,9 @@ namespace ProjetCovoiturage
             // e.g. container.RegisterType<ITestService, TestService>();
             
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
+            container.RegisterType<AccountController>(new InjectionConstructor());
+
+            container.RegisterType<IServiceTrajet, ServiceTrajet>();
         }
     }
 }
