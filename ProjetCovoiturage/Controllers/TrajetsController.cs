@@ -8,19 +8,51 @@ using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using ProjetCovoiturage.Models;
+using ProjetCovoiturage.Services;
+using ProjetCovoiturage.ViewModels;
 
 namespace ProjetCovoiturage.Controllers
 {
     public class TrajetsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        private IServiceTrajet _st;
+
+        public TrajetsController(IServiceTrajet pst)
+        {
+            _st = pst;
+        }
 
         // GET: Trajets
         public ActionResult Index()
         {
             return View(db.Trajets.ToList());
         }
+        public ActionResult FiltreTrajets(DateTime? datD, DateTime? datA, string villDepar, string villeArive)
+        {
+            // string tous = Session["Culture"].ToString() == "en" ? "ALL" : "Tout";
 
+            ViewBag.listVilleDep = new SelectList(_st.listVilleDep());
+            ViewBag.listVilleAriv = new SelectList(_st.listVilleArriv());
+            DateTime dD = new DateTime();
+            DateTime dF = new DateTime();
+            if (datD == null || datA == null)
+            {
+                dD = DateTime.Today;
+                dF = DateTime.Today;
+            }
+            else
+            {
+                dD = (DateTime)datD;
+                dF = (DateTime)datA;
+            }
+
+
+            List<Trajet> list = _st.ListeTrajets(); // _st.GetListeTrajetsBy(dD, dF, villDepar, villeArive);
+            VMFiltreTrajets v = new VMFiltreTrajets { calendarD = dD, calendarF = dF, villeDepart = "villeDep", villeDestination = "villearive", listTraj = list };
+
+            return View(v);
+        }
         // GET: Trajets/Details/5
         public ActionResult Details(int? id)
         {

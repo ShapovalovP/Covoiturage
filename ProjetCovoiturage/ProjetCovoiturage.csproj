@@ -261,6 +261,7 @@
     <Compile Include="Services\ServiceVoiture.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\VMChauffeurDeTrajet.cs" />
+    <Compile Include="ViewModels\VMFiltreTrajets.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-ProjetCovoiturage-20181119033914.mdf" />
