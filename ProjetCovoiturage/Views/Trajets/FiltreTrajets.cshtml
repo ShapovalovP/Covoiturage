@@ -1,0 +1,120 @@
+﻿@model ProjetCovoiturage.ViewModels.VMFiltreTrajets
+
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>FiltreTrajets</h2>
+@using (Html.BeginForm("FiltreTrajets", "Trajets", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.villeDepart, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" input type="submit">
+                @Html.DropDownListFor(m => m.villeDepart, (SelectList)ViewBag.listVilleDep, new { @class = "form-control", @onchange = "this.form.submit();" })
+            </div>
+        </div>
+        @if (Model.villeDepart != null && Model.villeDepart != "villeDep")
+        {
+            <div class="form-group">
+                @Html.LabelFor(model => model.villeDestination, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10" input type="submit">
+                    @Html.DropDownListFor(m => m.villeDestination, (SelectList)ViewBag.listVilleAriv, new { @class = "form-control", @onchange = "this.form.submit();" })
+                </div>
+            </div>
+        }
+
+        <div class="form-group">
+
+            @if (Model.villeDestination != null && Model.villeDestination != "villearive")
+            {
+                <div class="col-md-6" input type="submit">
+                    @Html.DisplayNameFor(model => model.calendarD)
+                    @Html.EditorFor(model => model.calendarD)
+                    @Html.ValidationMessageFor(model => model.calendarD, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-3" input type="submit">
+                    @Html.DisplayNameFor(model => model.calendarF)
+                    @Html.EditorFor(model => model.calendarF)
+                    @Html.ValidationMessageFor(model => model.calendarF, "", new { @class = "text-danger" })
+                </div>
+            }
+
+        </div>
+
+        <input type="submit" value=@ProjetCovoiturage.Resources.Models.Trajet.btnAfficher class="btn btn-default" />
+
+
+
+
+    </div>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.villeDepart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointDepart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointArrive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.villeDestination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.calendarD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.calendarF)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.listTraj)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VilleDepart)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PointDepart)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PointArrive)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prix)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VilleDestination)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HeureDepart)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HeureArrivee)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Details", "VMChauffeurDeTrajet", new { id = item.Id })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+

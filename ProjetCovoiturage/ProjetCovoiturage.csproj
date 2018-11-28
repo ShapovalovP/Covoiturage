@@ -427,6 +427,8 @@
     <Content Include="Views\Trajets\Edit.cshtml" />
     <Content Include="Views\Trajets\Index.cshtml" />
     <Content Include="Views\Trajets\Create.cshtml" />
+    <Content Include="Views\Trajets\FiltreTrajets.cshtml" />
+    <Content Include="Views\Trajets\VMChauffeurDeTrajet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\bin\en\" />
