@@ -53,6 +53,21 @@ namespace ProjetCovoiturage.Controllers
 
             return View(v);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult FiltreTrajets(VMFiltreTrajets rrr)
+        {
+            ViewBag.listVilleDep = new SelectList(_st.listVilleDep());
+            ViewBag.listVilleAriv = new SelectList(_st.listVilleArriv());
+            DateTime dD = (DateTime)rrr.calendarD;
+            DateTime dF = (DateTime)rrr.calendarF;
+            string villeDep = rrr.villeDepart;
+            string villearive = rrr.villeDestination;
+
+            List<Trajet> list = _st.GetListeTrajetsBy(dD, dF, rrr.villeDepart, rrr.villeDestination);
+            rrr = new VMFiltreTrajets { calendarD = dD, calendarF = dF, villeDepart = rrr.villeDepart, villeDestination = rrr.villeDestination, listTraj = list };
+            return View(rrr);
+        }
         // GET: Trajets/Details/5
         public ActionResult Details(int? id)
         {
@@ -60,7 +75,7 @@ namespace ProjetCovoiturage.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Trajet trajet = db.Trajets.Find(id);
+             Trajet trajet = _st.DetailTraget(id);
             if (trajet == null)
             {
                 return HttpNotFound();
@@ -68,6 +83,23 @@ namespace ProjetCovoiturage.Controllers
             return View(trajet);
         }
 
+        // GET: Trajets/Details/5
+        public ActionResult VMChauffeurDeTrajet(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            VMChauffeurDeTrajet rez = _st.DetailTragetChauffeur(id);
+
+
+            if (rez == null)
+            {
+                return HttpNotFound();
+            }
+            return View(rez);
+        }
         // GET: Trajets/Create
         public ActionResult Create()
         {
