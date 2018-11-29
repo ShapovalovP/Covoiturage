@@ -255,4 +255,19 @@
   <data name="VilleDestinationError1" xml:space="preserve">
     <value>Le ville  est requis</value>
   </data>
+  <data name="moyenneConfort" xml:space="preserve">
+    <value>Moyenne Confort</value>
+  </data>
+  <data name="moyenneCourtoisie" xml:space="preserve">
+    <value>Moyenne Courtoisie</value>
+  </data>
+  <data name="moyenneFiabilite" xml:space="preserve">
+    <value>Moyenne Fiabilité</value>
+  </data>
+  <data name="moyennePonctualite" xml:space="preserve">
+    <value>Moyenne Ponctualité</value>
+  </data>
+  <data name="moyenneSecurite" xml:space="preserve">
+    <value>Moyenne Sécurité</value>
+  </data>
 </root>

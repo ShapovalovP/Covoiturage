@@ -12,6 +12,7 @@ namespace ProjetCovoiturage.DAL
         private GenericRepository<Client> clientRepository;
         private GenericRepository<Trajet> trajetRepository;
         private GenericRepository<Voiture> voitureRepository;
+        private GenericRepository<NotesChauffeurs> notesChauffeursRepository;
 
         private ApplicationDbContext context = new ApplicationDbContext();
 
@@ -67,7 +68,17 @@ namespace ProjetCovoiturage.DAL
                 return voitureRepository;
             }
         }
-
+        public GenericRepository<NotesChauffeurs> NotesChauffeursRepository
+        {
+            get
+            {
+                if (this.notesChauffeursRepository == null)
+                {
+                    this.notesChauffeursRepository = new GenericRepository<NotesChauffeurs>(context);
+                }
+                return notesChauffeursRepository;
+            }
+        }
 
 
         public void Save()

@@ -205,6 +205,51 @@ namespace ProjetCovoiturage.Resources.Models {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Moyenne Confort.
+        /// </summary>
+        public static string moyenneConfort {
+            get {
+                return ResourceManager.GetString("moyenneConfort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Moyenne Courtoisie.
+        /// </summary>
+        public static string moyenneCourtoisie {
+            get {
+                return ResourceManager.GetString("moyenneCourtoisie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Moyenne Fiabilité.
+        /// </summary>
+        public static string moyenneFiabilite {
+            get {
+                return ResourceManager.GetString("moyenneFiabilite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Moyenne Ponctualité.
+        /// </summary>
+        public static string moyennePonctualite {
+            get {
+                return ResourceManager.GetString("moyennePonctualite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Moyenne Sécurité.
+        /// </summary>
+        public static string moyenneSecurite {
+            get {
+                return ResourceManager.GetString("moyenneSecurite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Nombre total de kilomètres.
         /// </summary>
         public static string nbKilometres {

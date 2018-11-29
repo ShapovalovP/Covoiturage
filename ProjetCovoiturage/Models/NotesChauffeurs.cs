@@ -16,10 +16,10 @@ namespace ProjetCovoiturage.Models
         [Required]
 
         [Range(0,5)]
-        public int notePonctualitée { get; set; }
+        public int notePonctualite { get; set; }
 
         [Range(0, 5)]
-        public  int noteSecuritée { get; set; }
+        public  int noteSecurite { get; set; }
 
         [Range(0, 5)]
         public int noteConfort { get; set; }
@@ -28,7 +28,7 @@ namespace ProjetCovoiturage.Models
         public int noteCourtoisie { get; set; }
 
         [Range(0, 5)]
-        public int noteFiabilitée { get; set; }
+        public int noteFiabilite { get; set; }
 
         public virtual Chauffeur chaufeurs { get;set; }
     }

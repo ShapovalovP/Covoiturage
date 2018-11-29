@@ -17,6 +17,19 @@ namespace ProjetCovoiturage.ViewModels
         [Display(Name = "moyenneApreci", ResourceType = typeof(Resources.Models.Trajet))]
         public string moyenneApreci { get; set; }
 
+
+        [Display(Name = "moyennePonctualite", ResourceType = typeof(Resources.Models.Trajet))]
+        public string moyennePonctualite { get; set; }
+        [Display(Name = "moyenneSecurite", ResourceType = typeof(Resources.Models.Trajet))]
+        public string moyenneSecurite { get; set; }
+        [Display(Name = "moyenneConfort", ResourceType = typeof(Resources.Models.Trajet))]
+        public string moyenneConfort { get; set; }
+        [Display(Name = "moyenneCourtoisie", ResourceType = typeof(Resources.Models.Trajet))]
+        public string moyenneCourtoisie { get; set; }
+        [Display(Name = "moyenneFiabilite", ResourceType = typeof(Resources.Models.Trajet))]
+        public string moyenneFiabilite { get; set; }
+
+
         [Display(Name = "VilleDepart", ResourceType = typeof(Resources.Models.Trajet))]
         public string VilleDepart { get; set; }
 

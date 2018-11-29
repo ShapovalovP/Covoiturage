@@ -32,14 +32,55 @@ namespace ProjetCovoiturage.Services
         {
             Trajet trajCourant = uw.TrajetRepository.GetByID(id);
 
-            Chauffeur ch = uw.ChauffeurRepository.GetByID(trajCourant.IdChauffeur);
+           // Chauffeur ch = uw.ChauffeurRepository.GetByID(trajCourant.Chauffeur);
             DateTime dToday = DateTime.Today;
             var rezz = this.ListeTrajets().ToList();
-            rezz = rezz.Where(x => x.IdChauffeur == trajCourant.IdChauffeur && x.HeureArrivee < dToday).ToList();
-            //  rezz = rezz.Where(x => x.HeureArrivee < dToday).ToList();
+            rezz = rezz.Where(x => x.Chauffeur == trajCourant.Chauffeur && x.HeureArrivee < dToday).ToList();
+            
             int qtyTraj = rezz.Count;
             int kilometreTotal = 0;
+            decimal ponctual= 0;
+            decimal securite = 0;
+            decimal comfort = 0;
+            decimal courtoisie = 0;
+            decimal fiabilite = 0;
 
+            int p = 0;
+            int s = 0;
+            int comf = 0;
+            int cour = 0;
+            int fiab = 0;
+
+            var notss = ListeNotes();
+            List<NotesChauffeurs> nots = new List<NotesChauffeurs>();
+            foreach (NotesChauffeurs n in notss)
+            {
+                if( n.chaufeurs == trajCourant.Chauffeur)
+                {
+                    nots.Add(n);
+                }
+            }
+
+           // nots = nots.Where(x => x.chaufeurs == trajCourant.Chauffeur);
+
+            if (nots.Count() > 0)
+            {
+
+                foreach (NotesChauffeurs n in nots)
+                {
+                    p = p + n.notePonctualite;
+                    s = s + n.noteSecurite;
+                    comf = comf + n.noteConfort;
+                    cour = cour + n.noteCourtoisie;
+                    fiab = fiab + n.noteFiabilite;
+                }
+
+                ponctual = (decimal)p / (decimal)nots.Count();
+                securite = (decimal)s / (decimal)nots.Count();
+                comfort = (decimal)comf / (decimal)nots.Count();
+                courtoisie = (decimal)cour / (decimal)nots.Count();
+                fiabilite = (decimal)fiab / (decimal)nots.Count();
+            }
             foreach (Trajet t in rezz)
             {
                 kilometreTotal += t.Kilometrage;
@@ -61,7 +102,13 @@ namespace ProjetCovoiturage.Services
             {
                 nbTrajets = qtyTraj.ToString(),
                 nbKilometres = kilometreTotal.ToString(),
-                moyenneApreci = "4.5",///Pomeniat!!! moyennes des appréciations de ses clients 1 ) sozdat tablicy Apreciation c itTarjet 
+
+                moyennePonctualite = ponctual.ToString(),///Pomeniat!!! moyennes des appréciations de ses clients 1 ) sozdat tablicy Apreciation c itTarjet 
+                moyenneSecurite = securite.ToString(),
+                moyenneConfort = comfort.ToString(),
+                moyenneCourtoisie = courtoisie.ToString(),
+                moyenneFiabilite = fiabilite.ToString(),
+
                 HeureDepart = trajCourant.HeureDepart,
                 HeureArrivee = trajCourant.HeureArrivee,
                 NbPassagers = trajCourant.PlaceRestante,
@@ -110,6 +157,11 @@ namespace ProjetCovoiturage.Services
         public List<Trajet> ListeTrajets()
         {
             return uw.TrajetRepository.Get().ToList();
+        }
+
+        public List<NotesChauffeurs> ListeNotes()
+        {
+            return uw.NotesChauffeursRepository.Get().ToList();
         }
 
         public List<string> listVilleArriv()
