@@ -12,6 +12,10 @@ html {
 body {
   margin: 0;
 }
+
+.checked {   /*dobavil dlia zvesdochek*/
+    color: orange;
+}
 article,
 aside,
 details,

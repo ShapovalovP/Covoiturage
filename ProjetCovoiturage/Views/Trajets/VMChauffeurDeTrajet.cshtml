@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "VMChauffeurDeTrajet";
 }
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> @*1) iz 3 dobavil dlia zvezdochek *@
 <h2>VMChauffeurDeTrajet</h2>
 
 <div>
@@ -35,13 +35,64 @@
 
                 <dd>
                     @Html.DisplayFor(model => model.moyennePonctualite)
+                    @if (Model.moyennePonctualite > 0)
+                    {<span class="fa fa-star  checked  "></span>} @*3)iz 3 zvezdochki   2) iz 3 dobavil v Content/bootstrap.css*@
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyennePonctualite > 1)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyennePonctualite > 2)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyennePonctualite > 3)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyennePonctualite > 4)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
                 </dd>
                 <dt>
+
                     @Html.DisplayNameFor(model => model.moyenneSecurite):
+
                 </dt>
 
                 <dd>
                     @Html.DisplayFor(model => model.moyenneSecurite)
+                    @if (Model.moyenneSecurite > 0)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneSecurite > 1)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneSecurite > 2)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneSecurite > 3)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneSecurite > 4)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
                 </dd>
                 <dt>
                     @Html.DisplayNameFor(model => model.moyenneConfort):
@@ -49,6 +100,30 @@
 
                 <dd>
                     @Html.DisplayFor(model => model.moyenneConfort)
+                    @if (Model.moyenneConfort > 0)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneConfort > 1)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneConfort > 2)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneConfort > 3)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneConfort > 4)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
                 </dd>
                 <dt>
                     @Html.DisplayNameFor(model => model.moyenneCourtoisie):
@@ -56,6 +131,30 @@
 
                 <dd>
                     @Html.DisplayFor(model => model.moyenneCourtoisie)
+                    @if (Model.moyenneCourtoisie > 0)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneCourtoisie > 1)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneCourtoisie > 2)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneCourtoisie > 3)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneCourtoisie > 4)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
                 </dd>
                 <dt>
                     @Html.DisplayNameFor(model => model.moyenneFiabilite):
@@ -63,6 +162,30 @@
 
                 <dd>
                     @Html.DisplayFor(model => model.moyenneFiabilite)
+                    @if (Model.moyenneFiabilite > 0)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneFiabilite > 1)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneFiabilite > 2)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneFiabilite > 3)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
+
+                    @if (Model.moyenneFiabilite > 4)
+                    {<span class="fa fa-star  checked  "></span>}
+                    else
+                    {<span class="fa fa-star"></span>}
                 </dd>
 
             </dl>
