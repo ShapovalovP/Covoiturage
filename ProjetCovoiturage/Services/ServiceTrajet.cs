@@ -103,11 +103,11 @@ namespace ProjetCovoiturage.Services
                 nbTrajets = qtyTraj.ToString(),
                 nbKilometres = kilometreTotal.ToString(),
 
-                moyennePonctualite = ponctual.ToString(),///Pomeniat!!! moyennes des appréciations de ses clients 1 ) sozdat tablicy Apreciation c itTarjet 
-                moyenneSecurite = securite.ToString(),
-                moyenneConfort = comfort.ToString(),
-                moyenneCourtoisie = courtoisie.ToString(),
-                moyenneFiabilite = fiabilite.ToString(),
+                moyennePonctualite = ponctual.ToString("F"),///Pomeniat!!! moyennes des appréciations de ses clients 1 ) sozdat tablicy Apreciation c itTarjet 
+                moyenneSecurite = securite.ToString("F"),
+                moyenneConfort = comfort.ToString("F"),
+                moyenneCourtoisie = courtoisie.ToString("F"),
+                moyenneFiabilite = fiabilite.ToString("F"),
 
                 HeureDepart = trajCourant.HeureDepart,
                 HeureArrivee = trajCourant.HeureArrivee,
