@@ -146,7 +146,7 @@ namespace ProjetCovoiturage.Services
             }
             if (datArive != null)
             {
-                rez = rez.Where(x => x.HeureDepart == datDepart).ToList();
+                rez = rez.Where(x => x.HeureArrivee == datArive).ToList();
 
             }
 

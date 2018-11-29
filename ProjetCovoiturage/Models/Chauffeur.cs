@@ -9,7 +9,7 @@ namespace ProjetCovoiturage.Models
     public class Chauffeur
     {
         [Key]
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Prenom { get; set; }
         public string Nom { get; set; }
         public string NumeroPermis { get; set; }

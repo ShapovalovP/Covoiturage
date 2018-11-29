@@ -220,7 +220,7 @@ namespace ProjetCovoiturage.Controllers
                 {
                     var currentUser = UserManager.Users.Where(x => x.Email == model.Email).FirstOrDefault();
                     
-                    Chauffeur chauffeur = new Chauffeur { Email=model.Email,Id = currentUser.Id, Prenom = model.Prenom, Nom = model.Nom, DateEmbauche = model.DateEmbauche, DatePermis = model.DatePermis, NumeroPermis = model.NumeroPermis, NumeroTelephone = model.NumeroTelephone, Ville = model.Ville,Voiture=new List<Voiture>()};
+                    Chauffeur chauffeur = new Chauffeur { Email=model.Email, Prenom = model.Prenom, Nom = model.Nom, DateEmbauche = model.DateEmbauche, DatePermis = model.DatePermis, NumeroPermis = model.NumeroPermis, NumeroTelephone = model.NumeroTelephone, Ville = model.Ville,Voiture=new List<Voiture>()};
                     chauffeur.Voiture.Add(new Voiture { nbPlace = model.NbPlace, ModeleVoiture = model.VehiculeModel, dateMiseRoute = model.DateEnRoute });
                     bd.Chauffeur.Add(chauffeur);
 
