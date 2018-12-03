@@ -88,6 +88,15 @@ namespace ProjetCovoiturage.Resources.Views {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Welcome .
+        /// </summary>
+        public static string Bonjour {
+            get {
+                return ResourceManager.GetString("Bonjour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Client Register.
         /// </summary>
         public static string ClientRegister {
