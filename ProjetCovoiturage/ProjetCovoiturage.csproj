@@ -226,6 +226,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NotesChauffeursController.cs" />
     <Compile Include="Controllers\TrajetsController.cs" />
     <Compile Include="DAL\GenericRepository.cs" />
     <Compile Include="DAL\IGenericRepository.cs" />
@@ -262,6 +263,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Trajet.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Home.fr1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Home1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.resx</DependentUpon>
     </Compile>
     <Compile Include="Services\IServiceChauffeur.cs" />
     <Compile Include="Services\IServiceClient.cs" />
@@ -441,6 +452,13 @@
     <Content Include="Views\Trajets\Create.cshtml" />
     <Content Include="Views\Trajets\FiltreTrajets.cshtml" />
     <Content Include="Views\Trajets\VMChauffeurDeTrajet.cshtml" />
+    <Content Include="Views\NotesChauffeurs\Create.cshtml" />
+    <Content Include="Views\NotesChauffeurs\Delete.cshtml" />
+    <Content Include="Views\NotesChauffeurs\Details.cshtml" />
+    <Content Include="Views\NotesChauffeurs\Edit.cshtml" />
+    <Content Include="Views\NotesChauffeurs\Index.cshtml" />
+    <Content Include="Views\Account\RegisterChauffeur.cshtml" />
+    <Content Include="Views\Account\RegisterClient.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\bin\en\" />
@@ -472,6 +490,14 @@
     <EmbeddedResource Include="Resources\Models\Trajet.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Trajet1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Home.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.fr1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Home.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
