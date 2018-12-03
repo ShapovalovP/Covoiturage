@@ -21,6 +21,10 @@ namespace ProjetCovoiturage.DAL
             context = mockContext;
         }
 
+        public UnitOfWork()
+        {
+        }
+
         public GenericRepository<Chauffeur> ChauffeurRepository
         {
             get
