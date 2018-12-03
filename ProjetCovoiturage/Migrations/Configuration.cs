@@ -29,9 +29,9 @@ namespace ProjetCovoiturage.Migrations
             List<Chauffeur> chauffeurs = new List<Chauffeur>()
             {
                 new Chauffeur { Nom = "Mc", Prenom = "Donald", NumeroPermis= "123456789", NumeroTelephone = 438911911, Ville= "Montreal",
-                    DatePermis = new DateTime(2010,01,01), DateEmbauche = new DateTime(2015,01,01) , Email= "a@a.com" },
+                    DatePermis = new DateTime(2010,01,01), DateEmbauche = new DateTime(2015,01,01) , Email= "a@a.com",Public=true },
                  new Chauffeur { Nom = "Max", Prenom = "Degouet", NumeroPermis= "987654321", NumeroTelephone = 450911911, Ville= "Toronto",
-                    DatePermis = new DateTime(2011,01,01), DateEmbauche = new DateTime(2014,01,01) , Email= "a@b.com" }
+                    DatePermis = new DateTime(2011,01,01), DateEmbauche = new DateTime(2014,01,01) , Email= "a@b.com",Public=false }
             };
             Chauffeur c = chauffeurs[0];
             Chauffeur c2 = chauffeurs[1];

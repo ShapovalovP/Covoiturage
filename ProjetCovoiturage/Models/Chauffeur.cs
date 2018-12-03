@@ -21,5 +21,6 @@ namespace ProjetCovoiturage.Models
         public virtual ICollection<Voiture> Voiture { get; set; }
         public virtual ICollection<NotesChauffeurs> NotesChauffeurs { get; set; }
         public virtual ICollection<Trajet> Trajets { get; set; }
+        public bool Public { get; set; }
     }
 }

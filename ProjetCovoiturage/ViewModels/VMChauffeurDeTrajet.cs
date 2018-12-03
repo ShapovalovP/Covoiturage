@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetCovoiturage.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -62,5 +63,6 @@ namespace ProjetCovoiturage.ViewModels
 
         [Display(Name = "Kilometrage", ResourceType = typeof(Resources.Models.Trajet))]
         public int Kilometrage { get; set; }
+        public Chauffeur Chauffeur { get; set; }
     }
 }

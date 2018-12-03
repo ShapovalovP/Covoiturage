@@ -105,6 +105,8 @@ namespace ProjetCovoiturage.Controllers
 
             VMChauffeurDeTrajet rez = _st.DetailTragetChauffeur(id);
             ViewBag.idTrajet = id;
+            Trajet t = db.Trajets.Where(x => x.Id == id).FirstOrDefault();
+            rez.Chauffeur = t.Chauffeur;
 
 
             if (rez == null)
@@ -133,7 +135,7 @@ namespace ProjetCovoiturage.Controllers
                Chauffeur chauffeur= db.Chauffeur.Where(x => x.Email == User.Identity.Name).FirstOrDefault();
                 DateTime heurearrive = new DateTime(trajet.DateArrivee.Year, trajet.DateArrivee.Month, trajet.DateArrivee.Day, trajet.HeureArrivee.Hour, trajet.HeureArrivee.Minute, trajet.HeureArrivee.Second);
                 DateTime heuredepart = new DateTime(trajet.DateDepart.Year, trajet.DateDepart.Month, trajet.DateDepart.Day, trajet.HeureDepart.Hour, trajet.HeureDepart.Minute, trajet.HeureDepart.Second);
-                Trajet newtrajet = new Trajet { Chauffeur=chauffeur,HeureArrivee = heurearrive, HeureDepart = heuredepart, PointDepart = trajet.PointDepart, PointArrive = trajet.PointArrive, Id = trajet.Id, Prix = trajet.Prix, VilleDepart = trajet.VilleDepart, VilleDestination = trajet.VilleDestination };
+                Trajet newtrajet = new Trajet { Chauffeur=chauffeur,HeureArrivee = heurearrive, HeureDepart = heuredepart, PointDepart = trajet.PointDepart, PointArrive = trajet.PointArrive, Id = trajet.Id, Prix = trajet.Prix, VilleDepart = trajet.VilleDepart, VilleDestination = trajet.VilleDestination, };
                 db.Trajets.Add(newtrajet);
                 db.SaveChanges();
                 return RedirectToAction("Index");
