@@ -264,8 +264,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Trajet.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Views\Home.Designer.cs" />
-    <Compile Include="Resources\Views\Home.fr.Designer.cs" />
+    <Compile Include="Resources\Views\Home.fr1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Home1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services\IServiceChauffeur.cs" />
     <Compile Include="Services\IServiceClient.cs" />
     <Compile Include="Services\IServiceTrajet.cs" />
@@ -449,6 +457,8 @@
     <Content Include="Views\NotesChauffeurs\Details.cshtml" />
     <Content Include="Views\NotesChauffeurs\Edit.cshtml" />
     <Content Include="Views\NotesChauffeurs\Index.cshtml" />
+    <Content Include="Views\Account\RegisterChauffeur.cshtml" />
+    <Content Include="Views\Account\RegisterClient.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\bin\en\" />
@@ -481,8 +491,14 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Trajet1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Views\Home.fr.resx" />
-    <EmbeddedResource Include="Resources\Views\Home.resx" />
+    <EmbeddedResource Include="Resources\Views\Home.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.fr1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Home.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -120,14 +120,47 @@
   <data name="About" xml:space="preserve">
     <value>Utilisez cette zone pour fournir des informations supplémentaires.</value>
   </data>
+  <data name="AboutPage" xml:space="preserve">
+    <value>À Propos</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Covoiturage</value>
+  </data>
+  <data name="ClientRegister" xml:space="preserve">
+    <value>Inscription Client</value>
+  </data>
+  <data name="ContactPage" xml:space="preserve">
+    <value>Contact</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>ASP.NET fait les applications Web en utilisant HTML, CSS and JavaScript.</value>
   </data>
   <data name="DescriptionLibrarie" xml:space="preserve">
     <value>NuGet est une extension gratuite de Visual Studio qui facilite l'ajout, la suppression et la mise à jour de bibliothèques et d'outils dans les projets Visual Studio.</value>
   </data>
+  <data name="DriverRegister" xml:space="preserve">
+    <value>Inscription Chauffeur</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Une erreur s'est produite pendant le traitement de votre demande.</value>
+  </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>ASP.NET</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Verrouillé</value>
+  </data>
+  <data name="LockedMessage" xml:space="preserve">
+    <value>Ce compte a été verrouillé, veuillez réessayer.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Se déconnecter</value>
   </data>
   <data name="More" xml:space="preserve">
     <value>En apprendre plus</value>
@@ -145,6 +178,15 @@
   </data>
   <data name="Title" xml:space="preserve">
     <value>Page d'accueil</value>
+  </data>
+  <data name="ViewBagMessageAbout" xml:space="preserve">
+    <value>Votre Page Description</value>
+  </data>
+  <data name="ViewBagMessageContact" xml:space="preserve">
+    <value>Votre Page Contact</value>
+  </data>
+  <data name="ViewBagMessageHome" xml:space="preserve">
+    <value>Accueil</value>
   </data>
   <data name="WebDescription" xml:space="preserve">
     <value>Vous pouvez facilement trouver une société d’hébergement Web qui offre la bonne combinaison de fonctionnalités et de prix pour vos applications.</value>
