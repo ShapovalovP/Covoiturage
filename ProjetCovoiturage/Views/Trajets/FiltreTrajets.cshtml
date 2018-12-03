@@ -114,7 +114,13 @@
                     @Html.DisplayFor(modelItem => item.HeureArrivee)
                 </td>
                 <td>
-
+                    @if (ViewBag.Delete == "Delete")
+                    {
+                        if (item.Chauffeur.Email == ViewBag.Name)
+                        {
+                           @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        }
+                    }
                     @Html.ActionLink("Details", "VMChauffeurDeTrajet", new { id = item.Id })
 
                 </td>

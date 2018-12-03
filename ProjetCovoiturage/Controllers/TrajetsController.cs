@@ -47,7 +47,11 @@ namespace ProjetCovoiturage.Controllers
                 dD = (DateTime)datD;
                 dF = (DateTime)datA;
             }
-
+            if (User.IsInRole("Chauffeur"))
+            {
+                ViewBag.Delete = "Delete";
+            }
+            ViewBag.Name = User.Identity.Name;
 
             List<Trajet> list = _st.ListeTrajets(); // _st.GetListeTrajetsBy(dD, dF, villDepar, villeArive);
             VMFiltreTrajets v = new VMFiltreTrajets { calendarD = dD, calendarF = dF, villeDepart = "villeDep", villeDestination = "villearive", listTraj = list };
@@ -65,6 +69,7 @@ namespace ProjetCovoiturage.Controllers
             string villeDep = rrr.villeDepart;
             string villearive = rrr.villeDestination;
 
+         
             List<Trajet> list = _st.GetListeTrajetsBy(dD, dF, rrr.villeDepart, rrr.villeDestination);
             rrr = new VMFiltreTrajets { calendarD = dD, calendarF = dF, villeDepart = rrr.villeDepart, villeDestination = rrr.villeDestination, listTraj = list };
             return View(rrr);
