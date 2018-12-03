@@ -274,36 +274,12 @@
         @Html.ActionLink("ReserverPlace", "ReserverPlace", new { x = ViewBag.idTrajet })
         @ViewBag.idTrajet
     </button>
+    @ViewBag.Message
     <button>
-        @Html.ActionLink("Canceller ma réservation", "CancellerReservation",  new { idtrajet = ViewBag.idTrajet })
+        @Html.ActionLink("Canceller ma réservation", "CancellerReservation", new { idtrajet = ViewBag.idTrajet })
     </button>
     <p>
         @* @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
         @Html.ActionLink("Back to List", "FiltreTrajets")
     </p>
 
-    @if (ViewBag.Message != null)
-    {
-        <script>
-
-        $(document).ready(function(){
-
-        alert('@ViewBag.Message');
-
-        });
-
-                </script>
-
-            }@if (ViewBag.Message != null)
-            {
-                <script>
-
-        $(document).ready(function(){
-
-        alert('@ViewBag.Message');
-
-        });
-
-        </script>
-
-    }

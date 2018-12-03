@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using ProjetCovoiturage.DAL;
 using ProjetCovoiturage.Models;
 using ProjetCovoiturage.Services;
 using ProjetCovoiturage.ViewModels;
@@ -17,11 +18,13 @@ namespace ProjetCovoiturage.Controllers
     public class TrajetsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        public UnitOfWork uow = new UnitOfWork();
         private IServiceTrajet _st;
 
         public TrajetsController(IServiceTrajet pst)
         {
             _st = pst;
+            
         }
 
         // GET: Trajets
@@ -85,9 +88,43 @@ namespace ProjetCovoiturage.Controllers
         }
 
         public ActionResult ReserverPlace(int? x) {
-            ViewBag.Message = "Réservation faite";
+            Trajet trajetCourrent = null;
+            //Get le trajet
+            foreach (Trajet item in db.Trajets.ToList())
+            {
+                if (item.Id == x)
+                {
+                    //check conditions
+                    trajetCourrent = item;                                    
+                }
+            }
+            if (trajetCourrent.PlaceRestante == 0)
+            {
+                TempData["shortMessage"] = "Aucune place disponible pour le trajet";
+            }
+            else
+            {
+                //enleve une place
+                int nbPlaceRestant = trajetCourrent.PlaceRestante - 1;
+                uow.TrajetRepository.Delete(trajetCourrent);
+                trajetCourrent.PlaceRestante = nbPlaceRestant;
+                uow.TrajetRepository.Insert(trajetCourrent);
+
+
+                db.Clients.Find(User.Identity).Trajets.Add(trajetCourrent);
+                db.SaveChanges();
+            }
+
+
+
+            //Add trajet si good conditions
+
+
+            TempData["shortMessage"] = "Reservation faite";
+
+
             Trajet trajet = _st.DetailTraget(x);
-            return View("VMChauffeurDeTrajet", trajet);
+            return RedirectToAction("VMChauffeurDeTrajet", trajet);
         }
 
         public ActionResult CancellerReservation(int? idTrajet) {
@@ -98,6 +135,7 @@ namespace ProjetCovoiturage.Controllers
         // GET: Trajets/Details/5
         public ActionResult VMChauffeurDeTrajet(int? id)
         {
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -105,7 +143,11 @@ namespace ProjetCovoiturage.Controllers
 
             VMChauffeurDeTrajet rez = _st.DetailTragetChauffeur(id);
             ViewBag.idTrajet = id;
-
+            if (TempData["shortMessage"]!= null)
+            {
+                ViewBag.Message = TempData["shortMessage"].ToString();
+            }
+            
 
             if (rez == null)
             {
