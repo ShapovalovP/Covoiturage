@@ -70,6 +70,42 @@ namespace ProjetCovoiturage.Resources.Views {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à About.
+        /// </summary>
+        public static string AboutPage {
+            get {
+                return ResourceManager.GetString("AboutPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Car Sharing.
+        /// </summary>
+        public static string ApplicationName {
+            get {
+                return ResourceManager.GetString("ApplicationName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Client Register.
+        /// </summary>
+        public static string ClientRegister {
+            get {
+                return ResourceManager.GetString("ClientRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Contact.
+        /// </summary>
+        public static string ContactPage {
+            get {
+                return ResourceManager.GetString("ContactPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript..
         /// </summary>
         public static string Description {
@@ -88,11 +124,74 @@ namespace ProjetCovoiturage.Resources.Views {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Driver Register.
+        /// </summary>
+        public static string DriverRegister {
+            get {
+                return ResourceManager.GetString("DriverRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Error.
+        /// </summary>
+        public static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à An error occurred while processing your request..
+        /// </summary>
+        public static string ErrorMessage {
+            get {
+                return ResourceManager.GetString("ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à ASP.NET.
         /// </summary>
         public static string HomeTitle {
             get {
                 return ResourceManager.GetString("HomeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Locked.
+        /// </summary>
+        public static string Locked {
+            get {
+                return ResourceManager.GetString("Locked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à This account has been locked, please try again..
+        /// </summary>
+        public static string LockedMessage {
+            get {
+                return ResourceManager.GetString("LockedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Login.
+        /// </summary>
+        public static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Logout.
+        /// </summary>
+        public static string Logout {
+            get {
+                return ResourceManager.GetString("Logout", resourceCulture);
             }
         }
         
@@ -140,6 +239,33 @@ namespace ProjetCovoiturage.Resources.Views {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Your application description page..
+        /// </summary>
+        public static string ViewBagMessageAbout {
+            get {
+                return ResourceManager.GetString("ViewBagMessageAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Your contact page..
+        /// </summary>
+        public static string ViewBagMessageContact {
+            get {
+                return ResourceManager.GetString("ViewBagMessageContact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Home.
+        /// </summary>
+        public static string ViewBagMessageHome {
+            get {
+                return ResourceManager.GetString("ViewBagMessageHome", resourceCulture);
             }
         }
         

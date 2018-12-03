@@ -10,16 +10,18 @@ namespace ProjetCovoiturage.Controllers
     [Authorize(Roles = "Chauffeur, Client")]
     public class HomeController : Controller
     {
+        [AllowAnonymous]
         public ActionResult PageFR()
         {
             Session["Culture"] = new CultureInfo("fr");
-            return RedirectToAction("Index");
+            return Redirect(Request.UrlReferrer.ToString());
         }
 
+        [AllowAnonymous]
         public ActionResult PageEN()
         {
             Session["Culture"] = new CultureInfo("en");
-            return RedirectToAction("Index");
+            return Redirect(Request.UrlReferrer.ToString());
         }
 
         public ActionResult Index()
@@ -29,15 +31,11 @@ namespace ProjetCovoiturage.Controllers
         [Authorize(Roles = "Chauffeur")]
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
         [Authorize(Roles = "Client")]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
