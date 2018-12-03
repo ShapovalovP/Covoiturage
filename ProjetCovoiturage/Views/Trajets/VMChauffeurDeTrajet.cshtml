@@ -269,6 +269,46 @@
 
             </dl>
         </div>
+
+
+
+        @if (Model.Chauffeur.Public == true)
+        {
+            <div class="col-md-6">
+                <h2>Informations</h2>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Chauffeur.Prenom)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Chauffeur.Prenom)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Chauffeur.Nom)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Chauffeur.Nom)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Chauffeur.Email)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Chauffeur.Email)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Chauffeur.NumeroTelephone)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Chauffeur.NumeroTelephone)
+                    </dd>
+
+                </dl>
+            </div>
+        }
+        else
+        {
+            <p>Informations privées!</p>
+        }
     </div>
     <button>
         @Html.ActionLink("ReserverPlace", "ReserverPlace", new { x = ViewBag.idTrajet })
