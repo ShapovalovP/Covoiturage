@@ -226,6 +226,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NotesChauffeursController.cs" />
     <Compile Include="Controllers\TrajetsController.cs" />
     <Compile Include="DAL\GenericRepository.cs" />
     <Compile Include="DAL\IGenericRepository.cs" />
@@ -263,6 +264,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Trajet.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Views\Home.Designer.cs" />
+    <Compile Include="Resources\Views\Home.fr.Designer.cs" />
     <Compile Include="Services\IServiceChauffeur.cs" />
     <Compile Include="Services\IServiceClient.cs" />
     <Compile Include="Services\IServiceTrajet.cs" />
@@ -441,6 +444,11 @@
     <Content Include="Views\Trajets\Create.cshtml" />
     <Content Include="Views\Trajets\FiltreTrajets.cshtml" />
     <Content Include="Views\Trajets\VMChauffeurDeTrajet.cshtml" />
+    <Content Include="Views\NotesChauffeurs\Create.cshtml" />
+    <Content Include="Views\NotesChauffeurs\Delete.cshtml" />
+    <Content Include="Views\NotesChauffeurs\Details.cshtml" />
+    <Content Include="Views\NotesChauffeurs\Edit.cshtml" />
+    <Content Include="Views\NotesChauffeurs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\bin\en\" />
@@ -473,6 +481,8 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Trajet1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Home.fr.resx" />
+    <EmbeddedResource Include="Resources\Views\Home.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

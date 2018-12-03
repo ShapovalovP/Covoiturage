@@ -76,12 +76,23 @@ namespace ProjetCovoiturage.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-             Trajet trajet = _st.DetailTraget(id);
+            Trajet trajet = _st.DetailTraget(id);
             if (trajet == null)
             {
                 return HttpNotFound();
             }
             return View(trajet);
+        }
+
+        public ActionResult ReserverPlace(int? x) {
+            ViewBag.Message = "Réservation faite";
+            Trajet trajet = _st.DetailTraget(x);
+            return View("VMChauffeurDeTrajet", trajet);
+        }
+
+        public ActionResult CancellerReservation(int? idTrajet) {
+
+            return View();
         }
 
         // GET: Trajets/Details/5
@@ -93,6 +104,7 @@ namespace ProjetCovoiturage.Controllers
             }
 
             VMChauffeurDeTrajet rez = _st.DetailTragetChauffeur(id);
+            ViewBag.idTrajet = id;
 
 
             if (rez == null)
@@ -102,6 +114,7 @@ namespace ProjetCovoiturage.Controllers
             return View(rez);
         }
         // GET: Trajets/Create
+        [Authorize(Roles = "Chauffeur")]
         public ActionResult Create()
         {
             return View();

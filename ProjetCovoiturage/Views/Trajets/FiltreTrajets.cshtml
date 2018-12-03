@@ -4,7 +4,13 @@
 @{
     ViewBag.Title = "Index";
 }
+
+
+
 <h2>FiltreTrajets</h2>
+<button>
+    @Html.ActionLink("Create New", "Create")
+</button>
 @using (Html.BeginForm("FiltreTrajets", "Trajets", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
