@@ -34,5 +34,6 @@ namespace ProjetCovoiturage.Models
         public string VilleClient { get; set; }
 
         public virtual ICollection<Trajet> Trajets { get; set; }
+
     }
 }
