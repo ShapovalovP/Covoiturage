@@ -1,21 +1,20 @@
 ﻿@model ProjetCovoiturage.Models.ExternalLoginConfirmationViewModel
 @{
-    ViewBag.Title = "S’inscrire";
+    ViewBag.Title = ProjetCovoiturage.Resources.Views.Account.Register;
 }
-<h2>@ViewBag.Title.</h2>
+<h2>@ProjetCovoiturage.Resources.Views.Account.Register</h2>
 <h3>Associer votre compte @ViewBag.LoginProvider.</h3>
 
 @using (Html.BeginForm("ExternalLoginConfirmation", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
 
-    <h4>Formulaire d'association</h4>
+    <h4>@ProjetCovoiturage.Resources.Views.Account.AssociationForm</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <p class="text-info">
-        Vous avez été authentifié avec succès avec <strong>@ViewBag.LoginProvider</strong>.
-        Veuillez entrer ci-dessous un nom d'utilisateur pour ce site et cliquer sur le bouton S'inscrire pour valider la
-        connexion.
+        @ProjetCovoiturage.Resources.Views.Account.AuthentificationSucces <strong>@ViewBag.LoginProvider</strong>.
+        @ProjetCovoiturage.Resources.Views.Account.AuthentificationMessage
     </p>
     <div class="form-group">
         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })

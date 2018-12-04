@@ -61,11 +61,120 @@ namespace ProjetCovoiturage.Resources.Views {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Association Form.
+        /// </summary>
+        public static string AssociationForm {
+            get {
+                return ResourceManager.GetString("AssociationForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Connection failed.
+        /// </summary>
+        public static string AuthentificationError {
+            get {
+                return ResourceManager.GetString("AuthentificationError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Failed to connect to the service..
+        /// </summary>
+        public static string AuthentificationErrorMessage {
+            get {
+                return ResourceManager.GetString("AuthentificationErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Please enter a username for this site below and click on the Register button to validate the
+        ///        connection..
+        /// </summary>
+        public static string AuthentificationMessage {
+            get {
+                return ResourceManager.GetString("AuthentificationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à You have been successfully authenticated with.
+        /// </summary>
+        public static string AuthentificationSucces {
+            get {
+                return ResourceManager.GetString("AuthentificationSucces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Back.
+        /// </summary>
+        public static string Back {
+            get {
+                return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Check.
+        /// </summary>
+        public static string Check {
+            get {
+                return ResourceManager.GetString("Check", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Click here to login.
         /// </summary>
         public static string ClickConnect {
             get {
                 return ResourceManager.GetString("ClickConnect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Client Register.
+        /// </summary>
+        public static string ClientRegister {
+            get {
+                return ResourceManager.GetString("ClientRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Confirm password forgotten.
+        /// </summary>
+        public static string ConfirmationForgotPasswd {
+            get {
+                return ResourceManager.GetString("ConfirmationForgotPasswd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Check your e-mail address to reset your password..
+        /// </summary>
+        public static string ConfirmationForgotPasswdMessage {
+            get {
+                return ResourceManager.GetString("ConfirmationForgotPasswdMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Add.
+        /// </summary>
+        public static string Create {
+            get {
+                return ResourceManager.GetString("Create", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Driver Register.
+        /// </summary>
+        public static string DriverRegister {
+            get {
+                return ResourceManager.GetString("DriverRegister", resourceCulture);
             }
         }
         
@@ -88,11 +197,65 @@ namespace ProjetCovoiturage.Resources.Views {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Enter the verification code.
+        /// </summary>
+        public static string EnterCode {
+            get {
+                return ResourceManager.GetString("EnterCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Forgot your password ?.
+        /// </summary>
+        public static string ForgotPasswd {
+            get {
+                return ResourceManager.GetString("ForgotPasswd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Email link.
+        /// </summary>
+        public static string LinkMessage {
+            get {
+                return ResourceManager.GetString("LinkMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Use a local account to sign in..
+        /// </summary>
+        public static string LocalAccount {
+            get {
+                return ResourceManager.GetString("LocalAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Login.
+        /// </summary>
+        public static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Login with your account.
         /// </summary>
         public static string LoginWithThisAccount {
             get {
                 return ResourceManager.GetString("LoginWithThisAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Enter an email address..
+        /// </summary>
+        public static string Messagerie {
+            get {
+                return ResourceManager.GetString("Messagerie", resourceCulture);
             }
         }
         
@@ -129,6 +292,87 @@ namespace ProjetCovoiturage.Resources.Views {
         public static string OtherService {
             get {
                 return ResourceManager.GetString("OtherService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Register.
+        /// </summary>
+        public static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Register as a new user.
+        /// </summary>
+        public static string RegisterNewUser {
+            get {
+                return ResourceManager.GetString("RegisterNewUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Reset.
+        /// </summary>
+        public static string Reset {
+            get {
+                return ResourceManager.GetString("Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Reset your password.
+        /// </summary>
+        public static string ResetPasswd {
+            get {
+                return ResourceManager.GetString("ResetPasswd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Reset password confirmation.
+        /// </summary>
+        public static string ResetPasswdMessage {
+            get {
+                return ResourceManager.GetString("ResetPasswdMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Your password has been reset. Please.
+        /// </summary>
+        public static string ResetPasswdSucces {
+            get {
+                return ResourceManager.GetString("ResetPasswdSucces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Select the 2-factor authentication provider:.
+        /// </summary>
+        public static string Select {
+            get {
+                return ResourceManager.GetString("Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Send.
+        /// </summary>
+        public static string Send {
+            get {
+                return ResourceManager.GetString("Send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Send the verification code.
+        /// </summary>
+        public static string SendCode {
+            get {
+                return ResourceManager.GetString("SendCode", resourceCulture);
             }
         }
     }

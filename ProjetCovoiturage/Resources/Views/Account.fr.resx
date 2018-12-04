@@ -117,8 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AssociationForm" xml:space="preserve">
+    <value>Formulaire d'association</value>
+  </data>
+  <data name="AuthentificationError" xml:space="preserve">
+    <value>Échec de la connexion</value>
+  </data>
+  <data name="AuthentificationErrorMessage" xml:space="preserve">
+    <value>Échec de la connexion auprès du service.</value>
+  </data>
+  <data name="AuthentificationMessage" xml:space="preserve">
+    <value>Veuillez entrer ci-dessous un nom d'utilisateur pour ce site et cliquer sur le bouton S'inscrire pour valider la
+        connexion.</value>
+  </data>
+  <data name="AuthentificationSucces" xml:space="preserve">
+    <value>Vous avez été authentifié avec succès avec</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Retour</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>Vérifier</value>
+  </data>
   <data name="ClickConnect" xml:space="preserve">
     <value>Cliquer ici pour vous connecter</value>
+  </data>
+  <data name="ClientRegister" xml:space="preserve">
+    <value>Inscription Client</value>
+  </data>
+  <data name="ConfirmationForgotPasswd" xml:space="preserve">
+    <value>Confirmation du mot de passe oublié</value>
+  </data>
+  <data name="ConfirmationForgotPasswdMessage" xml:space="preserve">
+    <value>Vérifiez votre adresse de messagerie pour réinitialiser votre mot de passe.</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="DriverRegister" xml:space="preserve">
+    <value>Inscription Chauffeur</value>
   </data>
   <data name="EmailConfirm" xml:space="preserve">
     <value>Confirmation de l'e-mail</value>
@@ -126,8 +163,26 @@
   <data name="EmailConfirmMessage" xml:space="preserve">
     <value>Merci d'avoir confirmé votre e-mail.</value>
   </data>
+  <data name="EnterCode" xml:space="preserve">
+    <value>Entrer le code de vérification</value>
+  </data>
+  <data name="ForgotPasswd" xml:space="preserve">
+    <value>Vous avez oublié votre mot de passe ?</value>
+  </data>
+  <data name="LinkMessage" xml:space="preserve">
+    <value>Lien de courrier électronique</value>
+  </data>
+  <data name="LocalAccount" xml:space="preserve">
+    <value>Utilisez un compte local pour vous connecter.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
   <data name="LoginWithThisAccount" xml:space="preserve">
     <value>Connexion avec votre compte</value>
+  </data>
+  <data name="Messagerie" xml:space="preserve">
+    <value>Entrez une adresse de messagerie.</value>
   </data>
   <data name="NoService" xml:space="preserve">
     <value>Aucun service d'authentification externe n'est configuré. Consultez  </value>
@@ -140,5 +195,32 @@
   </data>
   <data name="OtherService" xml:space="preserve">
     <value>Utilisez un autre service pour vous connecter.</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>S'inscrire</value>
+  </data>
+  <data name="RegisterNewUser" xml:space="preserve">
+    <value>S'inscrire comme nouvel utilisateur</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Réinitialiser</value>
+  </data>
+  <data name="ResetPasswd" xml:space="preserve">
+    <value>Réinitialisez votre mot de passe.</value>
+  </data>
+  <data name="ResetPasswdMessage" xml:space="preserve">
+    <value>Réinitialiser la confirmation du mot de passe</value>
+  </data>
+  <data name="ResetPasswdSucces" xml:space="preserve">
+    <value>Votre mot de passe a été réinitialisé. Veuillez</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Sélectionner le fournisseur d'authentification à 2 facteurs :</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Envoyer</value>
+  </data>
+  <data name="SendCode" xml:space="preserve">
+    <value>Envoyer le code de vérification</value>
   </data>
 </root>
