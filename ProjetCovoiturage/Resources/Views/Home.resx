@@ -126,6 +126,9 @@
   <data name="ApplicationName" xml:space="preserve">
     <value>Car Sharing</value>
   </data>
+  <data name="Bonjour" xml:space="preserve">
+    <value>Welcome </value>
+  </data>
   <data name="ClientRegister" xml:space="preserve">
     <value>Client Register</value>
   </data>

@@ -264,6 +264,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Trajet.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Views\Account.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Account.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.fr.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Views\Home.fr1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -490,6 +500,14 @@
     <EmbeddedResource Include="Resources\Models\Trajet.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Trajet1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Account.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Account.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Account.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Account.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Views\Home.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

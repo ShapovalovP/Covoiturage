@@ -117,84 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>Utilisez cette zone pour fournir des informations supplémentaires.</value>
+  <data name="ClickConnect" xml:space="preserve">
+    <value>Cliquer ici pour vous connecter</value>
   </data>
-  <data name="AboutPage" xml:space="preserve">
-    <value>À Propos</value>
+  <data name="EmailConfirm" xml:space="preserve">
+    <value>Confirmation de l'e-mail</value>
   </data>
-  <data name="ApplicationName" xml:space="preserve">
-    <value>Covoiturage</value>
+  <data name="EmailConfirmMessage" xml:space="preserve">
+    <value>Merci d'avoir confirmé votre e-mail.</value>
   </data>
-  <data name="Bonjour" xml:space="preserve">
-    <value>Bonjour </value>
+  <data name="LoginWithThisAccount" xml:space="preserve">
+    <value>Connexion avec votre compte</value>
   </data>
-  <data name="ClientRegister" xml:space="preserve">
-    <value>Inscription Client</value>
+  <data name="NoService" xml:space="preserve">
+    <value>Aucun service d'authentification externe n'est configuré. Consultez  </value>
   </data>
-  <data name="ContactPage" xml:space="preserve">
-    <value>Contact</value>
+  <data name="NoService2" xml:space="preserve">
+    <value>pour plus de détails sur la configuration de cette application ASP.NET afin qu'elle prenne en charge la connexion par l'intermédiaire de services externes.</value>
   </data>
-  <data name="Description" xml:space="preserve">
-    <value>ASP.NET fait les applications Web en utilisant HTML, CSS and JavaScript.</value>
+  <data name="NoServiceArticle" xml:space="preserve">
+    <value>cet article</value>
   </data>
-  <data name="DescriptionLibrarie" xml:space="preserve">
-    <value>NuGet est une extension gratuite de Visual Studio qui facilite l'ajout, la suppression et la mise à jour de bibliothèques et d'outils dans les projets Visual Studio.</value>
-  </data>
-  <data name="DriverRegister" xml:space="preserve">
-    <value>Inscription Chauffeur</value>
-  </data>
-  <data name="Error" xml:space="preserve">
-    <value>Erreur</value>
-  </data>
-  <data name="ErrorMessage" xml:space="preserve">
-    <value>Une erreur s'est produite pendant le traitement de votre demande.</value>
-  </data>
-  <data name="HomeTitle" xml:space="preserve">
-    <value>ASP.NET</value>
-  </data>
-  <data name="Locked" xml:space="preserve">
-    <value>Verrouillé</value>
-  </data>
-  <data name="LockedMessage" xml:space="preserve">
-    <value>Ce compte a été verrouillé, veuillez réessayer.</value>
-  </data>
-  <data name="Login" xml:space="preserve">
-    <value>Se connecter</value>
-  </data>
-  <data name="Logout" xml:space="preserve">
-    <value>Se déconnecter</value>
-  </data>
-  <data name="More" xml:space="preserve">
-    <value>En apprendre plus</value>
-  </data>
-  <data name="MoreDescription" xml:space="preserve">
-    <value>ASP.NET MVC vous offre un moyen puissant, basé sur des modèles, de créer des sites Web dynamiques qui
-            permet une séparation nette des problèmes et vous donne un contrôle total sur le balisage
-            pour un développement agréable et agile.</value>
-  </data>
-  <data name="MoreLibrarie" xml:space="preserve">
-    <value>Obtenez plus de bibliothèques</value>
-  </data>
-  <data name="Start" xml:space="preserve">
-    <value>Commencer</value>
-  </data>
-  <data name="Title" xml:space="preserve">
-    <value>Page d'accueil</value>
-  </data>
-  <data name="ViewBagMessageAbout" xml:space="preserve">
-    <value>Votre Page Description</value>
-  </data>
-  <data name="ViewBagMessageContact" xml:space="preserve">
-    <value>Votre Page Contact</value>
-  </data>
-  <data name="ViewBagMessageHome" xml:space="preserve">
-    <value>Accueil</value>
-  </data>
-  <data name="WebDescription" xml:space="preserve">
-    <value>Vous pouvez facilement trouver une société d’hébergement Web qui offre la bonne combinaison de fonctionnalités et de prix pour vos applications.</value>
-  </data>
-  <data name="WebHosting" xml:space="preserve">
-    <value>Hébergement Web</value>
+  <data name="OtherService" xml:space="preserve">
+    <value>Utilisez un autre service pour vous connecter.</value>
   </data>
 </root>
