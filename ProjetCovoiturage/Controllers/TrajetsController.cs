@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity;
 using ProjetCovoiturage.DAL;
 using ProjetCovoiturage.Models;
 using ProjetCovoiturage.Services;
+using ProjetCovoiturage.Validations;
 using ProjetCovoiturage.ViewModels;
 
 
@@ -186,7 +187,7 @@ namespace ProjetCovoiturage.Controllers
                 Trajet newtrajet = new Trajet { Chauffeur=chauffeur,HeureArrivee = heurearrive, HeureDepart = heuredepart, PointDepart = trajet.PointDepart, PointArrive = trajet.PointArrive, Id = trajet.Id, Prix = trajet.Prix, VilleDepart = trajet.VilleDepart, VilleDestination = trajet.VilleDestination,PlaceRestante=trajet.PlaceRestante };
                 db.Trajets.Add(newtrajet);
                 db.SaveChanges();
-                return RedirectToAction("FiltreTrajet");
+                return RedirectToAction("FiltreTrajets");
             }
 
             return View(trajet);
@@ -218,7 +219,7 @@ namespace ProjetCovoiturage.Controllers
             {
                 db.Entry(trajet).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("FiltreTrajet");
+                return RedirectToAction("FiltreTrajets");
             }
             return View(trajet);
         }
@@ -226,6 +227,10 @@ namespace ProjetCovoiturage.Controllers
         // GET: Trajets/Delete/5
         public ActionResult Delete(int? id)
         {
+            if (TempData["Error"] != null)
+            {
+                ViewBag.error = TempData["Error"].ToString();
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -241,12 +246,17 @@ namespace ProjetCovoiturage.Controllers
         // POST: Trajets/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Remove24hValidation]
         public ActionResult DeleteConfirmed(int id)
         {
-            Trajet trajet = db.Trajets.Find(id);
-            db.Trajets.Remove(trajet);
-            db.SaveChanges();
-            return RedirectToAction("FiltreTrajet");
+            if (ModelState.IsValid)
+            {
+                Trajet trajet = db.Trajets.Find(id);
+                db.Trajets.Remove(trajet);
+                db.SaveChanges();
+                return RedirectToAction("FiltreTrajets");
+            }
+            return View(id);
         }
 
         protected override void Dispose(bool disposing)

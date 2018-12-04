@@ -293,6 +293,8 @@
     <Compile Include="Services\ServiceTrajet.cs" />
     <Compile Include="Services\ServiceVoiture.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Validations\Ajout24hValidation.cs" />
+    <Compile Include="Validations\Remove24hValidation.cs" />
     <Compile Include="ViewModels\VMChauffeurDeTrajet.cs" />
     <Compile Include="ViewModels\VMFiltreTrajets.cs" />
   </ItemGroup>
@@ -473,7 +475,6 @@
   <ItemGroup>
     <Folder Include="bin\bin\en\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Validations\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

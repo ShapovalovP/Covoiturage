@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetCovoiturage.Validations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,6 +7,8 @@ using System.Web;
 
 namespace ProjetCovoiturage.Models
 {
+    [Ajout24hValidation]
+
     public class TrajetHeureDate
     {
         [Key]
