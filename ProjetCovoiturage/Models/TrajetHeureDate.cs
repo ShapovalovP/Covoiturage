@@ -54,7 +54,7 @@ namespace ProjetCovoiturage.Models
         // [Required(ErrorMessageResourceName = "HeureArriveError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
         public DateTime HeureArrivee { get; set; }
 
-
+        public int PlaceRestante { get; set; }
 
 
         //  public virtual ApplicationIdentity User { get; set; }
