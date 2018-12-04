@@ -1,14 +1,14 @@
 ﻿@model ProjetCovoiturage.Models.AddPhoneNumberViewModel
 @{
-    ViewBag.Title = "Numéro de téléphone";
+    ViewBag.Title = ProjetCovoiturage.Resources.Views.Manage.PhoneNumber;
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ProjetCovoiturage.Resources.Views.Manage.PhoneNumber</h2>
 
 @using (Html.BeginForm("AddPhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Ajouter un numéro de téléphone</h4>
+    <h4>@ProjetCovoiturage.Resources.Views.Manage.AddPhoneNumber</h4>
     <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Envoyer" />
+            <input type="submit" class="btn btn-default" value="@ProjetCovoiturage.Resources.Views.Manage.Send" />
         </div>
     </div>
 }

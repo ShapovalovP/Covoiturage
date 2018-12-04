@@ -117,110 +117,83 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AssociationForm" xml:space="preserve">
-    <value>Association Form</value>
+  <data name="AddPhoneNumber" xml:space="preserve">
+    <value>Ajouter un numéro de téléphone</value>
   </data>
-  <data name="AuthentificationError" xml:space="preserve">
-    <value>Connection failed</value>
+  <data name="Authentification" xml:space="preserve">
+    <value>2-factor authentication:</value>
   </data>
-  <data name="AuthentificationErrorMessage" xml:space="preserve">
-    <value>Failed to connect to the service.</value>
+  <data name="ChangeAccountParameters" xml:space="preserve">
+    <value>Change your account settings</value>
   </data>
-  <data name="AuthentificationMessage" xml:space="preserve">
-    <value>Please enter a username for this site below and click on the Register button to validate the
-        connection.</value>
+  <data name="ChangePasswd" xml:space="preserve">
+    <value>Change password</value>
   </data>
-  <data name="AuthentificationSucces" xml:space="preserve">
-    <value>You have been successfully authenticated with</value>
+  <data name="ChangePasswdForm" xml:space="preserve">
+    <value>Change the password form</value>
   </data>
-  <data name="Back" xml:space="preserve">
-    <value>Back</value>
+  <data name="CheckPhone" xml:space="preserve">
+    <value>Check the phone number</value>
   </data>
-  <data name="Check" xml:space="preserve">
-    <value>Check</value>
-  </data>
-  <data name="ClickConnect" xml:space="preserve">
-    <value>Click here to login</value>
-  </data>
-  <data name="ClientRegister" xml:space="preserve">
-    <value>Client Register</value>
-  </data>
-  <data name="ConfirmationForgotPasswd" xml:space="preserve">
-    <value>Confirm password forgotten</value>
-  </data>
-  <data name="ConfirmationForgotPasswdMessage" xml:space="preserve">
-    <value>Check your e-mail address to reset your password.</value>
+  <data name="ConnectionsRegistered" xml:space="preserve">
+    <value>Connections registered</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Add</value>
+    <value>Create</value>
   </data>
-  <data name="DriverRegister" xml:space="preserve">
-    <value>Driver Register</value>
+  <data name="CreateLocalConnection" xml:space="preserve">
+    <value>Create a local connection</value>
   </data>
-  <data name="EmailConfirm" xml:space="preserve">
-    <value>Email confirmed</value>
+  <data name="CreatePasswd" xml:space="preserve">
+    <value>Create password</value>
   </data>
-  <data name="EmailConfirmMessage" xml:space="preserve">
-    <value>Thank you for confirming your email.</value>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delete1" xml:space="preserve">
+    <value>Deleting this connection</value>
+  </data>
+  <data name="Delete2" xml:space="preserve">
+    <value>from your account</value>
   </data>
   <data name="EnterCode" xml:space="preserve">
     <value>Enter the verification code</value>
   </data>
-  <data name="ForgotPasswd" xml:space="preserve">
-    <value>Forgot your password ?</value>
-  </data>
-  <data name="LinkMessage" xml:space="preserve">
-    <value>Email link</value>
-  </data>
-  <data name="LocalAccount" xml:space="preserve">
-    <value>Use a local account to sign in.</value>
+  <data name="ExterneConnection" xml:space="preserve">
+    <value>External connections:</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="LoginWithThisAccount" xml:space="preserve">
     <value>Login with your account</value>
   </data>
-  <data name="Messagerie" xml:space="preserve">
-    <value>Enter an email address.</value>
+  <data name="ManageExternalConnections" xml:space="preserve">
+    <value>Manage your external connections</value>
   </data>
-  <data name="NoService" xml:space="preserve">
-    <value>No external authentication service is configured. See </value>
+  <data name="ManagePage" xml:space="preserve">
+    <value>Manage</value>
   </data>
-  <data name="NoService2" xml:space="preserve">
-    <value>for more details on configuring this ASP.NET application to support connection through external services.</value>
+  <data name="NoneAuthentification" xml:space="preserve">
+    <value>No two-factor authentication provider is configured. Consult</value>
   </data>
-  <data name="NoServiceArticle" xml:space="preserve">
-    <value>this article</value>
+  <data name="NoneAuthentification2" xml:space="preserve">
+    <value>for details on configuring this ASP.NET application to support two-factor authentication.</value>
   </data>
-  <data name="OtherService" xml:space="preserve">
-    <value>Use another service to connect.</value>
+  <data name="PasswdMessage" xml:space="preserve">
+    <value>You do not have a username / password for this site. Add an account
+    local so you can connect without an external connection.</value>
   </data>
-  <data name="Register" xml:space="preserve">
-    <value>Register</value>
+  <data name="Password" xml:space="preserve">
+    <value>Password :</value>
   </data>
-  <data name="RegisterNewUser" xml:space="preserve">
-    <value>Register as a new user</value>
-  </data>
-  <data name="Reset" xml:space="preserve">
-    <value>Reset</value>
-  </data>
-  <data name="ResetPasswd" xml:space="preserve">
-    <value>Reset your password</value>
-  </data>
-  <data name="ResetPasswdMessage" xml:space="preserve">
-    <value>Reset password confirmation</value>
-  </data>
-  <data name="ResetPasswdSucces" xml:space="preserve">
-    <value>Your password has been reset. Please</value>
-  </data>
-  <data name="Select" xml:space="preserve">
-    <value>Select the 2-factor authentication provider:</value>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Numéro de téléphone</value>
   </data>
   <data name="Send" xml:space="preserve">
-    <value>Send</value>
+    <value>Envoyer</value>
   </data>
-  <data name="SendCode" xml:space="preserve">
-    <value>Send the verification code</value>
+  <data name="SetPasswd" xml:space="preserve">
+    <value>Set password</value>
+  </data>
+  <data name="thisArticle" xml:space="preserve">
+    <value>this article</value>
   </data>
 </root>

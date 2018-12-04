@@ -284,6 +284,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Home.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Views\Manage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Manage.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manage.fr.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services\IServiceChauffeur.cs" />
     <Compile Include="Services\IServiceClient.cs" />
     <Compile Include="Services\IServiceTrajet.cs" />
@@ -444,7 +454,6 @@
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
@@ -517,6 +526,14 @@
     <EmbeddedResource Include="Resources\Views\Home.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Home1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Manage.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Manage.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Manage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Manage.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
