@@ -58,7 +58,8 @@ namespace ProjetCovoiturage.Models
         public DateTime HeureArrivee { get; set; }
 
         public int PlaceRestante { get; set; }
-
+        
+        public int Kilometrage { get; set; }
 
         //  public virtual ApplicationIdentity User { get; set; }
     }
