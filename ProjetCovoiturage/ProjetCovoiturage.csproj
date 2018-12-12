@@ -294,6 +294,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Manage.fr.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Views\NotesChauffeur.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NotesChauffeur.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\NotesChauffeur.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NotesChauffeur.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Trajet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Trajet.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Trajet.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Trajet.fr.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services\IServiceChauffeur.cs" />
     <Compile Include="Services\IServiceClient.cs" />
     <Compile Include="Services\IServiceTrajet.cs" />
@@ -534,6 +554,22 @@
     <EmbeddedResource Include="Resources\Views\Manage.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Manage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\NotesChauffeur.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>NotesChauffeur.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\NotesChauffeur.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>NotesChauffeur.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Trajet.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Trajet.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Trajet.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Trajet.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

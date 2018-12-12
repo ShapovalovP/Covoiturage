@@ -1,14 +1,14 @@
 ﻿@model ProjetCovoiturage.Models.Trajet
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = ProjetCovoiturage.Resources.Views.Trajet.Delete;
 }
 
-<h2>Delete</h2>
+<h2>@ProjetCovoiturage.Resources.Views.Trajet.Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>@ProjetCovoiturage.Resources.Views.Trajet.DeleteMessage</h3>
 <div>
-    <h4>Trajet</h4>
+    <h4>@ProjetCovoiturage.Resources.Views.Trajet.Ride</h4>
     <p>@ViewBag.error</p>
     <hr />
     <dl class="dl-horizontal">
@@ -74,8 +74,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="@ProjetCovoiturage.Resources.Views.Trajet.Delete" class="btn btn-default" /> |
+            @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Back, "Index")
         </div>
     }
 </div>

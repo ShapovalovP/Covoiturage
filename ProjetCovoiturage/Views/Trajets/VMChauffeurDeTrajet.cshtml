@@ -1,18 +1,18 @@
 ﻿@model ProjetCovoiturage.ViewModels.VMChauffeurDeTrajet
 
 @{
-    ViewBag.Title = "VMChauffeurDeTrajet";
+    ViewBag.Title = ProjetCovoiturage.Resources.Views.Trajet.DriverRide;
     int? idTraj = ViewBag.idTrajet;
 }
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> @*1) iz 3 dobavil dlia zvezdochek *@
-<h2>VMChauffeurDeTrajet</h2>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h2>@ProjetCovoiturage.Resources.Views.Trajet.DriverRide</h2>
 
 <div>
-    <h4>VMChauffeurDeTrajet</h4>
+    <h4>@ProjetCovoiturage.Resources.Views.Trajet.DriverRide</h4>
     <hr />
     <div class="row">
         <div class="col-md-6">
-            <h2>Chauffeur</h2>
+            <h2>@ProjetCovoiturage.Resources.Views.Trajet.Driver</h2>
             <dl class="dl-horizontal">
                 <dt>
                     @Html.DisplayNameFor(model => model.nbTrajets):
@@ -37,7 +37,7 @@
                 <dd>
                     @Html.DisplayFor(model => model.moyennePonctualite)
                     @if (Model.moyennePonctualite > 0)
-                    {<span class="fa fa-star  checked  "></span>} @*3)iz 3 zvezdochki   2) iz 3 dobavil v Content/bootstrap.css*@
+                    {<span class="fa fa-star  checked  "></span>}
                     else
                     {<span class="fa fa-star"></span>}
 
@@ -193,7 +193,7 @@
         </div>
 
         <div class="col-md-6">
-            <h2>Trajet</h2>
+            <h2>@ProjetCovoiturage.Resources.Views.Trajet.Ride</h2>
             <dl class="dl-horizontal">
                 <dt>
                     @Html.DisplayNameFor(model => model.VilleDepart)
@@ -275,7 +275,7 @@
         @if (Model.Chauffeur.Public == true)
         {
             <div class="col-md-6">
-                <h2>Informations</h2>
+                <h2>@ProjetCovoiturage.Resources.Views.Trajet.Infos</h2>
                 <dl class="dl-horizontal">
                     <dt>
                         @Html.DisplayNameFor(model => model.Chauffeur.Prenom)
@@ -307,19 +307,18 @@
         }
         else
         {
-            <p>Informations privées!</p>
+            <p>@ProjetCovoiturage.Resources.Views.Trajet.ConfidentialInfos</p>
         }
     </div>
     <button>
-        @Html.ActionLink("ReserverPlace", "ReserverPlace", new { x = ViewBag.idTrajet })
+        @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Book, "ReserverPlace", new { x = ViewBag.idTrajet })
         @ViewBag.idTrajet
     </button>
     @ViewBag.Message
     <button>
-        @Html.ActionLink("Canceller ma réservation", "CancellerReservation", new { idtrajet = ViewBag.idTrajet })
+        @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Cancel, "CancellerReservation", new { idtrajet = ViewBag.idTrajet })
     </button>
     <p>
-        @* @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
-        @Html.ActionLink("Back to List", "FiltreTrajets")
+        @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Back, "FiltreTrajets")
     </p>
 

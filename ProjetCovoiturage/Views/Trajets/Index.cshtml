@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<ProjetCovoiturage.Models.Trajet>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = ProjetCovoiturage.Resources.Views.Trajet.Index;
 }
 
-<h2>Index</h2>
+<h2>@ProjetCovoiturage.Resources.Views.Trajet.Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Add, "Create")
 </p>
 <table class="table">
     <tr>
@@ -65,9 +65,9 @@
             @Html.DisplayFor(modelItem => item.HeureArrivee)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Edit, "Edit", new { id = item.Id }) |
+            @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Details, "Details", new { id = item.Id }) |
+            @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Delete, "Delete", new { id = item.Id })
         </td>
     </tr>
 }

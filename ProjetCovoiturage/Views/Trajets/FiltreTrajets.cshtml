@@ -2,14 +2,14 @@
 
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = ProjetCovoiturage.Resources.Views.Trajet.Index;
 }
 
 
 
-<h2>FiltreTrajets</h2>
+<h2>@ProjetCovoiturage.Resources.Views.Trajet.FilterRide</h2>
 <button>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Add, "Create")
 </button>
 @using (Html.BeginForm("FiltreTrajets", "Trajets", FormMethod.Post))
 {
@@ -57,7 +57,7 @@
 
         </div>
 
-        <input type="submit" value= @*Afficher*@ @ProjetCovoiturage.Resources.Models.Trajet.btnAfficher class="btn btn-default" />
+        <input type="submit" value="@ProjetCovoiturage.Resources.Views.Trajet.Show" class="btn btn-default" />
 
 
 
@@ -114,14 +114,14 @@
                     @Html.DisplayFor(modelItem => item.HeureArrivee)
                 </td>
                 <td>
-                    @if (ViewBag.Delete == "Delete")
+                    @if (ViewBag.Delete == ProjetCovoiturage.Resources.Views.Trajet.Delete)
                     {
                         if (item.Chauffeur.Email == ViewBag.Name)
                         {
-                           @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                           @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Delete, "Delete", new { id = item.Id })
                         }
                     }
-                    @Html.ActionLink("Details", "VMChauffeurDeTrajet", new { id = item.Id })
+                    @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Details, "VMChauffeurDeTrajet", new { id = item.Id })
 
                 </td>
             </tr>
