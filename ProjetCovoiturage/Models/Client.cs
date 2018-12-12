@@ -12,25 +12,25 @@ namespace ProjetCovoiturage.Models
         [Key]
         public int ClientID { get; set; }
 
-        [Required]
-        [DisplayName("Prénom")]
+        [Required(ErrorMessageResourceName = "FirstNameRequiredError", ErrorMessageResourceType = typeof(Resources.Models.Client))]
+        [Display(Name = "FirstName", ResourceType = typeof(Resources.Models.Client))]
         public string ClientPrenom { get; set; }
 
-        [Required]
-        [DisplayName("Nom")]
+        [Required(ErrorMessageResourceName = "LastNameRequiredError", ErrorMessageResourceType = typeof(Resources.Models.Client))]
+        [Display(Name = "LastName", ResourceType = typeof(Resources.Models.Client))]
         public string ClientNom { get; set; }
 
-        [Required]
-        [DisplayName("Téléphone")]
+        [Required(ErrorMessageResourceName = "PhoneNumberRequiredError", ErrorMessageResourceType = typeof(Resources.Models.Client))]
+        [Display(Name = "PhoneNumber", ResourceType = typeof(Resources.Models.Client))]
         public string TelephoneClient { get; set; }
 
-        [Required]
-        [DisplayName("Âge")]
+        [Required(ErrorMessageResourceName = "AgeRequiredError", ErrorMessageResourceType = typeof(Resources.Models.Client))]
+        [Display(Name = "Age", ResourceType = typeof(Resources.Models.Client))]
         [Range(21, 70)]
         public int AgeClient { get; set; }
 
-        [Required]
-        [DisplayName("Ville")]
+        [Required(ErrorMessageResourceName = "CityRequiredError", ErrorMessageResourceType = typeof(Resources.Models.Client))]
+        [Display(Name = "Ville", ResourceType = typeof(Resources.Models.Client))]
         public string VilleClient { get; set; }
 
         public virtual ICollection<Trajet> Trajets { get; set; }

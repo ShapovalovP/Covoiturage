@@ -27,7 +27,7 @@ namespace ProjetCovoiturage.Validations
                 {
                     //filterContext.Controller.TempData["FlashMessage"] = "Impossible de retirer un trajet 24 heure ou moins avant le trajet";
                     filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Trajets", action = "Delete", id = idTemp }));
-                    filterContext.Controller.TempData.Add("Error", "Impossible de retirer un trajet 24 heure ou moins avant le trajet");
+                    filterContext.Controller.TempData.Add("Error", ProjetCovoiturage.Resources.Models.Validations.Impossible24H);
                 }
                 base.OnActionExecuting(filterContext);
 

@@ -177,14 +177,14 @@ namespace ProjetCovoiturage.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Chauffeur")]
-        public ActionResult Create([Bind(Include = "Id,VilleDepart,PointDepart,PointArrive,Prix,VilleDestination,DateDepart,HeureDepart,DateArrivee,HeureArrivee,PlaceRestante, Kilometrage")] TrajetHeureDate trajet)
+        public ActionResult Create([Bind(Include = "Id,VilleDepart,PointDepart,PointArrivee,Prix,VilleDestination,DateDepart,HeureDepart,DateArrivee,HeureArrivee,PlaceRestante, Kilometrage")] TrajetHeureDate trajet)
         {
             if (ModelState.IsValid)
             {
                Chauffeur chauffeur= db.Chauffeur.Where(x => x.Email == User.Identity.Name).FirstOrDefault();
                 DateTime heurearrive = new DateTime(trajet.DateArrivee.Year, trajet.DateArrivee.Month, trajet.DateArrivee.Day, trajet.HeureArrivee.Hour, trajet.HeureArrivee.Minute, trajet.HeureArrivee.Second);
                 DateTime heuredepart = new DateTime(trajet.DateDepart.Year, trajet.DateDepart.Month, trajet.DateDepart.Day, trajet.HeureDepart.Hour, trajet.HeureDepart.Minute, trajet.HeureDepart.Second);
-                Trajet newtrajet = new Trajet { Chauffeur=chauffeur,HeureArrivee = heurearrive, HeureDepart = heuredepart, PointDepart = trajet.PointDepart, PointArrive = trajet.PointArrive, Id = trajet.Id,
+                Trajet newtrajet = new Trajet { Chauffeur=chauffeur,HeureArrivee = heurearrive, HeureDepart = heuredepart, PointDepart = trajet.PointDepart, PointArrivee = trajet.PointArrivee, Id = trajet.Id,
                     Prix = trajet.Prix, VilleDepart = trajet.VilleDepart, VilleDestination = trajet.VilleDestination,PlaceRestante=trajet.PlaceRestante, Kilometrage = trajet.Kilometrage
                 };
                 db.Trajets.Add(newtrajet);
@@ -215,7 +215,7 @@ namespace ProjetCovoiturage.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,VilleDepart,PointDepart,PointArrive,Prix,VilleDestination,HeureDepart,HeureArrivee")] Trajet trajet)
+        public ActionResult Edit([Bind(Include = "Id,VilleDepart,PointDepart,PointArrivee,Prix,VilleDestination,HeureDepart,HeureArrivee")] Trajet trajet)
         {
             if (ModelState.IsValid)
             {

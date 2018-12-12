@@ -165,6 +165,9 @@
   <data name="Ride" xml:space="preserve">
     <value>Ride</value>
   </data>
+  <data name="Rides" xml:space="preserve">
+    <value>Rides</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>

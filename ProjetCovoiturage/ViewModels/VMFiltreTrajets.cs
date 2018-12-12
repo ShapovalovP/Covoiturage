@@ -12,43 +12,37 @@ namespace ProjetCovoiturage.ViewModels
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true,
 DataFormatString = "{0:dd/MM/yyyy}")]
-        [Display(Name = "HeurDepart", ResourceType = typeof(Resources.Models.Trajet))]
+        [Display(Name = "DepartureHour", ResourceType = typeof(Resources.Views.VMFiltreTrajets))]
         public DateTime calendarD { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true,
  DataFormatString = "{0:dd/MM/yyyy}")]
-        [Display(Name = "HeurArrive", ResourceType = typeof(Resources.Models.Trajet))]
+        [Display(Name = "ArrivalHour", ResourceType = typeof(Resources.Views.VMFiltreTrajets))]
         public DateTime calendarF { get; set; }
 
 
-        [Display(Name = "VilleDepart", ResourceType = typeof(Resources.Models.Trajet))]
-
+        [Display(Name = "DepartureCity", ResourceType = typeof(Resources.Views.VMFiltreTrajets))]
         public string villeDepart { get; set; }
 
-        [Display(Name = "VilleDestination", ResourceType = typeof(Resources.Models.Trajet))]
-
+        [Display(Name = "ArrivalCity", ResourceType = typeof(Resources.Views.VMFiltreTrajets))]
         public string villeDestination { get; set; }
 
         public List<Trajet> listTraj { get; set; }
 
-        [Display(Name = "PointDepart", ResourceType = typeof(Resources.Models.Trajet))]
-
+        [Display(Name = "StartingPoint", ResourceType = typeof(Resources.Views.VMFiltreTrajets))]
         public string PointDepart { get; set; }
 
-        [Display(Name = "PointArrive", ResourceType = typeof(Resources.Models.Trajet))]
+        [Display(Name = "ArrivalPoint", ResourceType = typeof(Resources.Views.VMFiltreTrajets))]
+        public string PointArrivee { get; set; }
 
-        public string PointArrive { get; set; }
-
-        [Display(Name = "Prix", ResourceType = typeof(Resources.Models.Trajet))]
-
+        [Display(Name = "Price", ResourceType = typeof(Resources.Views.VMFiltreTrajets))]
         public string Prix { get; set; }
 
-        [Display(Name = "Kilometrage", ResourceType = typeof(Resources.Models.Trajet))]
+        [Display(Name = "Mileage", ResourceType = typeof(Resources.Views.VMFiltreTrajets))]
         public int Kilometrage { get; set; }
 
-        [Display(Name = "NbPassagers", ResourceType = typeof(Resources.Models.Trajet))]
-
+        [Display(Name = "NumberSeatsLeft", ResourceType = typeof(Resources.Views.VMFiltreTrajets))]
         public int NbPassagers { get; set; }
     }
 }

@@ -205,6 +205,15 @@ namespace ProjetCovoiturage.Resources.Views {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Rides.
+        /// </summary>
+        public static string Rides {
+            get {
+                return ResourceManager.GetString("Rides", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Save.
         /// </summary>
         public static string Save {

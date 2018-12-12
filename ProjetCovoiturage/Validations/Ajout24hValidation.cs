@@ -17,7 +17,7 @@ namespace ProjetCovoiturage.Validations
             dateaujourdhui= dateaujourdhui.AddDays(1);
             if (dateaujourdhui > datedepart)
             {
-                return new ValidationResult("La date de départ doit avoir une différence de 24 heure au minimum de la date de création");
+                return new ValidationResult(ProjetCovoiturage.Resources.Models.Validations.Add24H);
             }
             return ValidationResult.Success;
         }

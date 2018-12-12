@@ -40,22 +40,22 @@ namespace ProjetCovoiturage.Migrations
             {
 
                 new Trajet {Chauffeur = c, HeureDepart = new DateTime(2019,01,01) , HeureArrivee = new DateTime(2019,01,02), Kilometrage = 700,
-                    VilleDepart = "Montreal", VilleDestination= "Toronto", PlaceRestante = 4, PointDepart = "college", PointArrive= "airport", Prix = 50  },
+                    VilleDepart = "Montreal", VilleDestination= "Toronto", PlaceRestante = 4, PointDepart = "college", PointArrivee= "airport", Prix = 50  },
                   new Trajet {Chauffeur = c, HeureDepart = new DateTime(2019,01,11) , HeureArrivee = new DateTime(2019,01,12), Kilometrage = 500,
-                    VilleDepart = "Montreal", VilleDestination= "Kingston", PlaceRestante = 3, PointDepart = "port", PointArrive= "airport", Prix = 20  },
+                    VilleDepart = "Montreal", VilleDestination= "Kingston", PlaceRestante = 3, PointDepart = "port", PointArrivee= "airport", Prix = 20  },
                   new Trajet {Chauffeur = c, HeureDepart = new DateTime(2018,01,11) , HeureArrivee = new DateTime(2018,01,12), Kilometrage = 500,
-                    VilleDepart = "Montreal", VilleDestination= "Kingston", PlaceRestante = 3, PointDepart = "port", PointArrive= "airport", Prix = 20  },
+                    VilleDepart = "Montreal", VilleDestination= "Kingston", PlaceRestante = 3, PointDepart = "port", PointArrivee= "airport", Prix = 20  },
                           new Trajet {Chauffeur = c, HeureDepart = new DateTime(2018,01,01) , HeureArrivee = new DateTime(2018,01,02), Kilometrage = 700,
-                    VilleDepart = "Montreal", VilleDestination= "Toronto", PlaceRestante = 3, PointDepart = "college", PointArrive= "airport", Prix = 20  },
+                    VilleDepart = "Montreal", VilleDestination= "Toronto", PlaceRestante = 3, PointDepart = "college", PointArrivee= "airport", Prix = 20  },
 
                 new Trajet {Chauffeur = c2, HeureDepart = new DateTime(2019,01,01) , HeureArrivee = new DateTime(2019,01,02), Kilometrage = 700,
-                    VilleDepart = "Toronto" , VilleDestination= "Montreal", PlaceRestante = 4, PointDepart = "college", PointArrive= "airport", Prix = 50  },
+                    VilleDepart = "Toronto" , VilleDestination= "Montreal", PlaceRestante = 4, PointDepart = "college", PointArrivee= "airport", Prix = 50  },
                   new Trajet {Chauffeur = c2, HeureDepart = new DateTime(2018,01,11) , HeureArrivee = new DateTime(2018,01,12), Kilometrage = 500,
-                    VilleDepart = "Kingston", VilleDestination= "Montreal", PlaceRestante = 3, PointDepart = "port", PointArrive= "airport", Prix = 20  },
+                    VilleDepart = "Kingston", VilleDestination= "Montreal", PlaceRestante = 3, PointDepart = "port", PointArrivee= "airport", Prix = 20  },
                   new Trajet {Chauffeur = c2, HeureDepart = new DateTime(2018,01,11) , HeureArrivee = new DateTime(2018,01,12), Kilometrage = 500,
-                    VilleDepart = "Kingston", VilleDestination= "Montreal", PlaceRestante = 3, PointDepart = "port", PointArrive= "airport", Prix = 20  },
+                    VilleDepart = "Kingston", VilleDestination= "Montreal", PlaceRestante = 3, PointDepart = "port", PointArrivee= "airport", Prix = 20  },
                           new Trajet {Chauffeur = c2, HeureDepart = new DateTime(2018,01,01) , HeureArrivee = new DateTime(2018,01,02), Kilometrage = 700,
-                    VilleDepart = "Toronto", VilleDestination= "Montreal", PlaceRestante = 3, PointDepart = "college", PointArrive= "airport", Prix = 20  },
+                    VilleDepart = "Toronto", VilleDestination= "Montreal", PlaceRestante = 3, PointDepart = "college", PointArrivee= "airport", Prix = 20  },
 
             };
             List<NotesChauffeurs> notes = new List<NotesChauffeurs>()

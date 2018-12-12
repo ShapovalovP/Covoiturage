@@ -115,9 +115,9 @@ namespace ProjetCovoiturage.Services
                 Prix = trajCourant.Prix,
                 Kilometrage = trajCourant.Kilometrage,
                 VilleDepart = trajCourant.VilleDepart,
-                PointDepart = trajCourant.PointArrive,
+                PointDepart = trajCourant.PointArrivee,
                 VilleDestination = trajCourant.VilleDestination,
-                PointArrive = trajCourant.PointArrive,
+                PointArrivee = trajCourant.PointArrivee,
             };
 
             return v;

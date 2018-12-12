@@ -249,20 +249,105 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Models\Trajet.en1.Designer.cs">
+    <Compile Include="Resources\Models\AccountViewModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Trajet.en.resx</DependentUpon>
+      <DependentUpon>AccountViewModel.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Models\Trajet.fr1.Designer.cs">
+    <Compile Include="Resources\Models\AccountViewModel.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountViewModel.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Chauffeur.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chauffeur.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Chauffeur.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chauffeur.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Client.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Client.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Client.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Client.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\IdentityModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IdentityModel.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\IdentityModel.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IdentityModel.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\ManageViewModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageViewModels.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\ManageViewModels.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageViewModels.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\NotesChauffeur.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NotesChauffeur.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\NotesChauffeur.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NotesChauffeur.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Trajet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Trajet.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Trajet.fr.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Trajet.fr.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Models\Trajet1.Designer.cs">
+    <Compile Include="Resources\Models\TrajetHeureDate.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Trajet.resx</DependentUpon>
+      <DependentUpon>TrajetHeureDate.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\TrajetHeureDate.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrajetHeureDate.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Validations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Validations.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Validations.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Validations.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Voiture.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Voiture.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Voiture.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Voiture.fr.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\Views\Account.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -313,6 +398,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Trajet.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\VMChauffeurDeTrajet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VMChauffeurDeTrajet.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\VMChauffeurDeTrajet.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VMChauffeurDeTrajet.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\VMFiltreTrajets.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VMFiltreTrajets.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\VMFiltreTrajets.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VMFiltreTrajets.fr.resx</DependentUpon>
     </Compile>
     <Compile Include="Services\IServiceChauffeur.cs" />
     <Compile Include="Services\IServiceClient.cs" />
@@ -519,17 +624,85 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Models\Trajet.en.resx">
+    <EmbeddedResource Include="Resources\Models\AccountViewModel.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Trajet.en1.Designer.cs</LastGenOutput>
+      <LastGenOutput>AccountViewModel.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\AccountViewModel.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountViewModel.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Chauffeur.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chauffeur.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Chauffeur.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chauffeur.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Client.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Client.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Client.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Client.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\IdentityModel.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>IdentityModel.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\IdentityModel.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>IdentityModel.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\ManageViewModels.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageViewModels.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\ManageViewModels.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageViewModels.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\NotesChauffeur.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>NotesChauffeur.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\NotesChauffeur.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>NotesChauffeur.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Models\Trajet.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Trajet.fr1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Trajet.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Models\Trajet.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Trajet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Trajet.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\TrajetHeureDate.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TrajetHeureDate.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\TrajetHeureDate.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TrajetHeureDate.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Validations.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Voiture.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Voiture.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Voiture.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Voiture.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Views\Account.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -570,6 +743,22 @@
     <EmbeddedResource Include="Resources\Views\Trajet.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Trajet.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\VMChauffeurDeTrajet.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>VMChauffeurDeTrajet.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\VMChauffeurDeTrajet.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>VMChauffeurDeTrajet.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\VMFiltreTrajets.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>VMFiltreTrajets.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\VMFiltreTrajets.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>VMFiltreTrajets.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
