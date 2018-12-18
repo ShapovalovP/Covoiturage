@@ -1,37 +1,37 @@
 ﻿@model ProjetCovoiturage.Models.NotesChauffeurs
 
 @{
-    ViewBag.Title = ProjetCovoiturage.Resources.Views.NotesChauffeur.Details;
+    ViewBag.Title = "Details";
 }
 
-<h2>@ProjetCovoiturage.Resources.Views.NotesChauffeur.Details</h2>
+<h2>Details</h2>
 
 <div>
-    <h4>@ProjetCovoiturage.Resources.Views.NotesChauffeur.ReviewDriver</h4>
+    <h4>NotesChauffeurs</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.chauffeurId)
+            @Html.DisplayNameFor(model => model.chaufeurs.Prenom)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.chauffeurId)
+            @Html.DisplayFor(model => model.chaufeurs.Prenom)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.notePonctualitée)
+            @Html.DisplayNameFor(model => model.notePonctualite)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.notePonctualitée)
+            @Html.DisplayFor(model => model.notePonctualite)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.noteSecuritée)
+            @Html.DisplayNameFor(model => model.noteSecurite)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.noteSecuritée)
+            @Html.DisplayFor(model => model.noteSecurite)
         </dd>
 
         <dt>
@@ -51,16 +51,16 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.noteFiabilitée)
+            @Html.DisplayNameFor(model => model.noteFiabilite)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.noteFiabilitée)
+            @Html.DisplayFor(model => model.noteFiabilite)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink(ProjetCovoiturage.Resources.Views.NotesChauffeur.Edit, "Edit", new { id = Model.noteId }) |
-    @Html.ActionLink(ProjetCovoiturage.Resources.Views.NotesChauffeur.Back, "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.noteId }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

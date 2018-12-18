@@ -316,7 +316,7 @@
     </button>
     @ViewBag.Message
     <button>
-        @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Cancel, "CancellerReservation", new { idtrajet = ViewBag.idTrajet })
+        @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Cancel, "CancellerReservation", new { x = ViewBag.idTrajet })
     </button>
     <p>
         @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Back, "FiltreTrajets")

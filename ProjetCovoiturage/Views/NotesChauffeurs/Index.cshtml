@@ -1,24 +1,24 @@
 ﻿@model IEnumerable<ProjetCovoiturage.Models.NotesChauffeurs>
 
 @{
-    ViewBag.Title = ProjetCovoiturage.Resources.Views.NotesChauffeur.Index;
+    ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink(ProjetCovoiturage.Resources.Views.NotesChauffeur.Add, "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.chauffeurId)
+            @Html.DisplayNameFor(model => model.chaufeurs.Prenom)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.notePonctualitée)
+            @Html.DisplayNameFor(model => model.notePonctualite)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.noteSecuritée)
+            @Html.DisplayNameFor(model => model.noteSecurite)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.noteConfort)
@@ -27,7 +27,7 @@
             @Html.DisplayNameFor(model => model.noteCourtoisie)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.noteFiabilitée)
+            @Html.DisplayNameFor(model => model.noteFiabilite)
         </th>
         <th></th>
     </tr>
@@ -35,13 +35,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.chauffeurId)
+            @Html.DisplayFor(modelItem => item.chaufeurs.Prenom)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.notePonctualitée)
+            @Html.DisplayFor(modelItem => item.notePonctualite)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.noteSecuritée)
+            @Html.DisplayFor(modelItem => item.noteSecurite)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.noteConfort)
@@ -50,12 +50,12 @@
             @Html.DisplayFor(modelItem => item.noteCourtoisie)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.noteFiabilitée)
+            @Html.DisplayFor(modelItem => item.noteFiabilite)
         </td>
         <td>
-            @Html.ActionLink(ProjetCovoiturage.Resources.Views.NotesChauffeur.Edit, "Edit", new { id=item.noteId }) |
-            @Html.ActionLink(ProjetCovoiturage.Resources.Views.NotesChauffeur.Details, "Details", new { id=item.noteId }) |
-            @Html.ActionLink(ProjetCovoiturage.Resources.Views.NotesChauffeur.Delete, "Delete", new { id=item.noteId })
+            @Html.ActionLink("Edit", "Edit", new { id=item.noteId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.noteId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.noteId })
         </td>
     </tr>
 }

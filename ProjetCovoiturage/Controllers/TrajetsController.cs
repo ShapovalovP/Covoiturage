@@ -103,7 +103,7 @@ namespace ProjetCovoiturage.Controllers
                 if (item.Id == x)
                 {
                     //check conditions
-                    trajetCourrent = item;                                    
+                    trajetCourrent = item;
                 }
             }
             if (trajetCourrent.PlaceRestante == 0)
@@ -112,22 +112,24 @@ namespace ProjetCovoiturage.Controllers
             }
             else
             {
-                //enleve une place
+                string userId = User.Identity.GetUserId();
+                //ENLEVER UNE PLACE DANS LE TRAJET
                 int nbPlaceRestant = trajetCourrent.PlaceRestante - 1;
-                uow.TrajetRepository.Delete(trajetCourrent);
                 trajetCourrent.PlaceRestante = nbPlaceRestant;
-                uow.TrajetRepository.Insert(trajetCourrent);
-
-
-                db.Clients.Find(User.Identity).Trajets.Add(trajetCourrent);
+                db.Entry(trajetCourrent).State = EntityState.Modified;
+                db.SaveChanges();
+                //MOFICICATIONS A TABLE CLIENT SI BESOIN
+                Client test = db.Clients.Where(s => s.UserId == userId).FirstOrDefault();
+                if (test == null)
+                {
+                    db.Clients.Add(new Client { UserId = User.Identity.GetUserId() });
+                    db.SaveChanges();
+                }
+                //MODIFICATION TABLE ClientsTrajets
+                Client clientCourrant = db.Clients.Where(s => s.UserId == userId).FirstOrDefault();
+                db.ClientTrajets.Add(new ClientsTrajets { Client_ClientID = clientCourrant.ClientID, Trajet_Id = trajetCourrent.Id });
                 db.SaveChanges();
             }
-
-
-
-            //Add trajet si good conditions
-
-
             TempData["shortMessage"] = "Reservation faite";
 
 
@@ -135,9 +137,31 @@ namespace ProjetCovoiturage.Controllers
             return RedirectToAction("VMChauffeurDeTrajet", trajet);
         }
 
-        public ActionResult CancellerReservation(int? idTrajet) {
-
-            return View();
+        public ActionResult CancellerReservation(int? x) {
+            Trajet trajetCourrent = null;
+            //Get le trajet
+            foreach (Trajet item in db.Trajets.ToList())
+            {
+                if (item.Id == x)
+                {
+                    //check conditions
+                    trajetCourrent = item;
+                }
+            }
+            string userId = User.Identity.GetUserId();
+            //ENLEVER UNE PLACE DANS LE TRAJET
+            int nbPlaceRestant = trajetCourrent.PlaceRestante + 1;
+            trajetCourrent.PlaceRestante = nbPlaceRestant;
+            db.Entry(trajetCourrent).State = EntityState.Modified;
+            db.SaveChanges();
+            //MODIFICATION TABLE ClientsTrajets
+            Client clientCourrant = db.Clients.Where(s => s.UserId == userId).FirstOrDefault();
+            ClientsTrajets ct = db.ClientTrajets.Where(s => s.Trajet_Id == trajetCourrent.Id && s.Client_ClientID == clientCourrant.ClientID).FirstOrDefault();
+            db.ClientTrajets.Remove(ct);
+            db.SaveChanges();
+            //Redirect
+            Trajet trajet = _st.DetailTraget(x);
+            return RedirectToAction("VMChauffeurDeTrajet", trajet);
         }
 
         // GET: Trajets/Details/5
