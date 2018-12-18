@@ -101,7 +101,7 @@ namespace ProjetCovoiturage.Controllers
                 if (item.Id == x)
                 {
                     //check conditions
-                    trajetCourrent = item;                                    
+                    trajetCourrent = item;
                 }
             }
             if (trajetCourrent.PlaceRestante == 0)
@@ -112,12 +112,24 @@ namespace ProjetCovoiturage.Controllers
             {
                 //enleve une place
                 int nbPlaceRestant = trajetCourrent.PlaceRestante - 1;
-                uow.TrajetRepository.Delete(trajetCourrent);
+
+                //Trajet NouveauTrajet = trajetCourrent;
+                //NouveauTrajet.PlaceRestante = nbPlaceRestant;
+                //uow.TrajetRepository.Delete(trajetCourrent);
+                db.Trajets.Remove(trajetCourrent);
+                db.SaveChanges();
+
                 trajetCourrent.PlaceRestante = nbPlaceRestant;
-                uow.TrajetRepository.Insert(trajetCourrent);
+
+                //uow.TrajetRepository.Update(trajetCourrent);
+                //db.Entry(trajetCourrent).State = EntityState.Modified;
+                //db.SaveChanges();
+
+                db.Trajets.Add(trajetCourrent);
+                db.SaveChanges();
 
 
-                db.Clients.Find(User.Identity).Trajets.Add(trajetCourrent);
+
                 db.SaveChanges();
             }
 

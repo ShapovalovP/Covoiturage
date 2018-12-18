@@ -47,7 +47,7 @@ namespace ProjetCovoiturage.Models
         [Required(ErrorMessageResourceName = "MileageRequiredError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
         public int Kilometrage { get; set; }
 
-        public virtual ICollection<Client> Client { get; set; }
+        public virtual ICollection<ClientsTrajets> ClientTrajet { get; set; }
         public virtual Chauffeur Chauffeur { get; set; }
 
         [Display(Name = "NumberSeatsLeft", ResourceType = typeof(Resources.Models.Trajet))]

@@ -33,7 +33,7 @@ namespace ProjetCovoiturage.Models
         [Display(Name = "Ville", ResourceType = typeof(Resources.Models.Client))]
         public string VilleClient { get; set; }
 
-        public virtual ICollection<Trajet> Trajets { get; set; }
+        public virtual ICollection<ClientsTrajets> ClientTrajet { get; set; }
 
     }
 }

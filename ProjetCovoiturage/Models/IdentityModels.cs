@@ -43,6 +43,27 @@ namespace ProjetCovoiturage.Models
         {
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            //modelBuilder.Entity<ClientsTrajets>().ToTable("EtudiantEmotion");
+            modelBuilder.Entity<ClientsTrajets>()
+                .HasKey(s => new { s.Client_ClientID, s.Trajet_Id });
+
+            //association Client - ClientTrajet
+
+            modelBuilder.Entity<Client>()
+                .HasMany(s => s.ClientTrajet)
+                .WithRequired(s => s.client)
+                .HasForeignKey(s => s.Client_ClientID);
+
+            //association ClientTrajet - trajet
+            modelBuilder.Entity<Trajet>()
+                .HasMany(s => s.ClientTrajet)
+                .WithRequired(s => s.trajet)
+                .HasForeignKey(s => s.Trajet_Id);
+        }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
@@ -56,5 +77,7 @@ namespace ProjetCovoiturage.Models
         public virtual DbSet<Voiture> Voitures { get; set; }
 
         public virtual DbSet<NotesChauffeurs> NotesChauffeurs { get; set; }
+
+        public virtual DbSet<ClientsTrajets> ClientTrajets { get; set; }
     }
 }
