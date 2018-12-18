@@ -17,7 +17,8 @@ namespace ProjetCovoiturage.Controllers
         // GET: NotesChauffeurs
         public ActionResult Index()
         {
-            return View(db.NotesChauffeurs.ToList());
+            var notesChauffeurs = db.NotesChauffeurs.Include(n => n.chaufeurs);
+            return View(notesChauffeurs.ToList());
         }
 
         // GET: NotesChauffeurs/Details/5
@@ -38,6 +39,7 @@ namespace ProjetCovoiturage.Controllers
         // GET: NotesChauffeurs/Create
         public ActionResult Create()
         {
+            ViewBag.chauffeurId = new SelectList(db.Chauffeur, "Id", "Prenom");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace ProjetCovoiturage.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "noteId,chauffeurId,notePonctualitée,noteSecuritée,noteConfort,noteCourtoisie,noteFiabilitée")] NotesChauffeurs notesChauffeurs)
+        public ActionResult Create([Bind(Include = "noteId,chauffeurId,notePonctualite,noteSecurite,noteConfort,noteCourtoisie,noteFiabilite")] NotesChauffeurs notesChauffeurs)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace ProjetCovoiturage.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.chauffeurId = new SelectList(db.Chauffeur, "Id", "Prenom", notesChauffeurs.chauffeurId);
             return View(notesChauffeurs);
         }
 
@@ -70,6 +73,7 @@ namespace ProjetCovoiturage.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.chauffeurId = new SelectList(db.Chauffeur, "Id", "Prenom", notesChauffeurs.chauffeurId);
             return View(notesChauffeurs);
         }
 
@@ -78,7 +82,7 @@ namespace ProjetCovoiturage.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "noteId,chauffeurId,notePonctualitée,noteSecuritée,noteConfort,noteCourtoisie,noteFiabilitée")] NotesChauffeurs notesChauffeurs)
+        public ActionResult Edit([Bind(Include = "noteId,chauffeurId,notePonctualite,noteSecurite,noteConfort,noteCourtoisie,noteFiabilite")] NotesChauffeurs notesChauffeurs)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace ProjetCovoiturage.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.chauffeurId = new SelectList(db.Chauffeur, "Id", "Prenom", notesChauffeurs.chauffeurId);
             return View(notesChauffeurs);
         }
 

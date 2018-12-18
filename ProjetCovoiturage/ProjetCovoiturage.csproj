@@ -655,13 +655,13 @@
     <Content Include="Views\Trajets\Create.cshtml" />
     <Content Include="Views\Trajets\FiltreTrajets.cshtml" />
     <Content Include="Views\Trajets\VMChauffeurDeTrajet.cshtml" />
+    <Content Include="Views\Account\RegisterChauffeur.cshtml" />
+    <Content Include="Views\Account\RegisterClient.cshtml" />
     <Content Include="Views\NotesChauffeurs\Create.cshtml" />
     <Content Include="Views\NotesChauffeurs\Delete.cshtml" />
     <Content Include="Views\NotesChauffeurs\Details.cshtml" />
     <Content Include="Views\NotesChauffeurs\Edit.cshtml" />
     <Content Include="Views\NotesChauffeurs\Index.cshtml" />
-    <Content Include="Views\Account\RegisterChauffeur.cshtml" />
-    <Content Include="Views\Account\RegisterClient.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\bin\en\" />

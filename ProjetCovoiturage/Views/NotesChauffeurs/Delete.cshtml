@@ -1,38 +1,38 @@
 ﻿@model ProjetCovoiturage.Models.NotesChauffeurs
 
 @{
-    ViewBag.Title = ProjetCovoiturage.Resources.Views.NotesChauffeur.Delete;
+    ViewBag.Title = "Delete";
 }
 
-<h2>@ProjetCovoiturage.Resources.Views.NotesChauffeur.Delete</h2>
+<h2>Delete</h2>
 
-<h3>@ProjetCovoiturage.Resources.Views.NotesChauffeur.DeleteMessage</h3>
+<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>@ProjetCovoiturage.Resources.Views.NotesChauffeur.ReviewDriver</h4>
+    <h4>NotesChauffeurs</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.chauffeurId)
+            @Html.DisplayNameFor(model => model.chaufeurs.Prenom)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.chauffeurId)
+            @Html.DisplayFor(model => model.chaufeurs.Prenom)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.notePonctualitée)
+            @Html.DisplayNameFor(model => model.notePonctualite)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.notePonctualitée)
+            @Html.DisplayFor(model => model.notePonctualite)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.noteSecuritée)
+            @Html.DisplayNameFor(model => model.noteSecurite)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.noteSecuritée)
+            @Html.DisplayFor(model => model.noteSecurite)
         </dd>
 
         <dt>
@@ -52,11 +52,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.noteFiabilitée)
+            @Html.DisplayNameFor(model => model.noteFiabilite)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.noteFiabilitée)
+            @Html.DisplayFor(model => model.noteFiabilite)
         </dd>
 
     </dl>
@@ -65,8 +65,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="@ProjetCovoiturage.Resources.Views.NotesChauffeur.Delete" class="btn btn-default" /> |
-            @Html.ActionLink(ProjetCovoiturage.Resources.Views.NotesChauffeur.Back, "Index")
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
         </div>
     }
 </div>
