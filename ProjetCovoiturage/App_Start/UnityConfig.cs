@@ -29,6 +29,7 @@ namespace ProjetCovoiturage
             container.RegisterType<ManageController>(new InjectionConstructor());
             //container.RegisterType<UsersAdminController>(new InjectionConstructor());
             container.RegisterType<IServiceTrajet, ServiceTrajet>();
+            container.RegisterType<IServiceNotesClients, ServiceNotesClients>();
         }
     }
 }

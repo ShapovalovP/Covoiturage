@@ -53,12 +53,21 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -227,6 +236,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NotesChauffeursController.cs" />
+    <Compile Include="Controllers\NotesClientsController.cs" />
     <Compile Include="Controllers\TrajetsController.cs" />
     <Compile Include="DAL\GenericRepository.cs" />
     <Compile Include="DAL\IGenericRepository.cs" />
@@ -391,6 +401,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NotesChauffeur.fr.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Views\Stats.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stats.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Stats.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stats.fr.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Views\Trajet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -436,6 +456,8 @@
     <Compile Include="Validations\Remove24hValidation.cs" />
     <Compile Include="ViewModels\VMChauffeurDeTrajet.cs" />
     <Compile Include="ViewModels\VMFiltreTrajets.cs" />
+    <Compile Include="ViewModels\VMStatsClients.cs" />
+    <Compile Include="ViewModels\VMStatsVille.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-ProjetCovoiturage-20181119033914.mdf" />
@@ -669,7 +691,13 @@
     <Content Include="Views\NotesChauffeurs\Index.cshtml" />
     <Content Include="Views\Account\RegisterChauffeur.cshtml" />
     <Content Include="Views\Account\RegisterClient.cshtml" />
-    <Content Include="Views\Trajets\Dashboard.cshtml" />
+    <Content Include="Views\NotesClients\Create.cshtml" />
+    <Content Include="Views\NotesClients\Delete.cshtml" />
+    <Content Include="Views\NotesClients\Details.cshtml" />
+    <Content Include="Views\NotesClients\Edit.cshtml" />
+    <Content Include="Views\NotesClients\Index.cshtml" />
+    <Content Include="Views\NotesClients\StatsClients.cshtml" />
+    <Content Include="Views\NotesClients\StatsVille.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\bin\en\" />
@@ -801,6 +829,14 @@
     <EmbeddedResource Include="Resources\Views\NotesChauffeur.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>NotesChauffeur.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Stats.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Stats.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Stats.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Stats.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Views\Trajet.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

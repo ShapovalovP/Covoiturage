@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ProjetCovoiturage.ViewModels.VMStatsVille>
+
+@{
+    ViewBag.Title = ProjetCovoiturage.Resources.Views.Stats.DashboardCity;
+}
+
+<h1>@ProjetCovoiturage.Resources.Views.Stats.DescritpionCity</h1>
+
+<h2>@ProjetCovoiturage.Resources.Views.Stats.DashboardCity</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomVilleArrivee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.km)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomVilleArrivee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.km)
+        </td>
+    </tr>
+}
+
+</table>

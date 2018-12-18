@@ -10,8 +10,10 @@ namespace ProjetCovoiturage.Models
     public class Client
     {
         [Key]
+        [Display(Name = "customerID", ResourceType = typeof(Resources.Views.Stats))]
         public int ClientID { get; set; }
 
+        [Display(Name = "UserID", ResourceType = typeof(Resources.Views.Stats))]
         public string UserId { get; set; }
 
         public virtual ICollection<ClientsTrajets> ClientTrajet { get; set; }

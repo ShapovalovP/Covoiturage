@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ProjetCovoiturage.ViewModels.VMStatsClients>
+
+@{
+    ViewBag.Title = ProjetCovoiturage.Resources.Views.Stats.DashboardCustomers;
+}
+
+<h1>@ProjetCovoiturage.Resources.Views.Stats.DescriptionCustomer</h1>
+
+<h2>@ProjetCovoiturage.Resources.Views.Stats.DashboardCustomers</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.clientID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.note)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.clientID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.note)
+        </td>
+    </tr>
+}
+
+</table>

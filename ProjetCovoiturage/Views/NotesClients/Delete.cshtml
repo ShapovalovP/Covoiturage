@@ -1,0 +1,48 @@
+﻿@model ProjetCovoiturage.Models.NotesClient
+
+@{
+    ViewBag.Title = ProjetCovoiturage.Resources.Views.Stats.Delete;
+}
+
+<h2>@ProjetCovoiturage.Resources.Views.Stats.Delete</h2>
+
+<h3>@ProjetCovoiturage.Resources.Views.Stats.DeleteMessage</h3>
+<div>
+    <h4>@ProjetCovoiturage.Resources.Views.Stats.ReviewCustomers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.clientID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trajetID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trajetID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@ProjetCovoiturage.Resources.Views.Stats.Delete" class="btn btn-default" /> |
+            @Html.ActionLink(ProjetCovoiturage.Resources.Views.Stats.Back, "Index")
+        </div>
+    }
+</div>

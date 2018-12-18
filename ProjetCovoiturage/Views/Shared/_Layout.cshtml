@@ -22,13 +22,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink(ProjetCovoiturage.Resources.Views.Home.Title, "Index", "Home")</li>
                     <li>@Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Rides, "FiltreTrajets", "Trajets")</li>
-                    <li>@Html.ActionLink(ProjetCovoiturage.Resources.Views.Home.AboutPage, "About", "Home")</li>
-                    <li>@Html.ActionLink(ProjetCovoiturage.Resources.Views.Home.ContactPage, "Contact", "Home")</li>
-                    <li>@Html.ActionLink("In English", "PageEN", "Home")</li>
-                    <li>@Html.ActionLink("En Français", "PageFR", "Home")</li>
-                    <li>@Html.ActionLink("Noter Chauffeur", "Create", "NotesChauffeurs")</li>
+                    <li>@Html.ActionLink("En", "PageEN", "Home")</li>
+                    <li>@Html.ActionLink("Fr", "PageFR", "Home")</li>
+                    <li>@Html.ActionLink(ProjetCovoiturage.Resources.Views.Stats.ReviewDriver, "Create", "NotesChauffeurs")</li>
+                    <li>@Html.ActionLink(ProjetCovoiturage.Resources.Views.Stats.DashboardCustomers, "StatsClients", "NotesClients")</li>
+                    <li>@Html.ActionLink(ProjetCovoiturage.Resources.Views.Stats.DashboardCity, "StatsVille", "NotesClients")</li>
 
                 </ul>
                 @Html.Partial("_LoginPartial")

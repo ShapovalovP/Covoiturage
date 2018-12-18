@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProjetCovoiturage.Models.NotesClient>
+
+@{
+    ViewBag.Title = ProjetCovoiturage.Resources.Views.Stats.Index;
+}
+
+<h2>@ProjetCovoiturage.Resources.Views.Stats.Index</h2>
+
+<p>
+    @Html.ActionLink(ProjetCovoiturage.Resources.Views.Stats.Create, "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.clientID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trajetID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.note)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.clientID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trajetID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.note)
+        </td>
+        <td>
+            @Html.ActionLink(ProjetCovoiturage.Resources.Views.Stats.Edit, "Edit", new { id=item.noteID }) |
+            @Html.ActionLink(ProjetCovoiturage.Resources.Views.Stats.Details, "Details", new { id=item.noteID }) |
+            @Html.ActionLink(ProjetCovoiturage.Resources.Views.Stats.Delete, "Delete", new { id=item.noteID })
+        </td>
+    </tr>
+}
+
+</table>
