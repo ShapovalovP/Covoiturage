@@ -669,6 +669,7 @@
     <Content Include="Views\NotesChauffeurs\Index.cshtml" />
     <Content Include="Views\Account\RegisterChauffeur.cshtml" />
     <Content Include="Views\Account\RegisterClient.cshtml" />
+    <Content Include="Views\Trajets\Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\bin\en\" />

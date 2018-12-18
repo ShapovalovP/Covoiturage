@@ -36,8 +36,8 @@ namespace ProjetCovoiturage.Migrations
 
             List<Client> clients = new List<Client>()
             {
-                new Client { ClientID = 1, ClientNom = "Peuplu", ClientPrenom = "Jean", AgeClient = 18, TelephoneClient = "44444", VilleClient = "Iberville" },
-                new Client { ClientID = 2, ClientNom = "Peuplu", ClientPrenom = "Jean", AgeClient = 18, TelephoneClient = "44444", VilleClient = "Iberville" }
+                new Client { ClientID = 1 },
+                new Client { ClientID = 2 }
             };
 
             Client cl1 = clients[0];
@@ -103,6 +103,7 @@ namespace ProjetCovoiturage.Migrations
                 new NotesClient { clientID = cl1.ClientID, note = 3, trajetID = 5  }
             };
 
+            context.NotesClients.AddRange(notesClients);
             context.Clients.AddRange(clients);
             context.Chauffeur.AddRange(chauffeurs);
             context.Trajets.AddRange(trajets);

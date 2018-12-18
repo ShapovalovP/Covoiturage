@@ -307,7 +307,7 @@ namespace ProjetCovoiturage.Controllers
 
             foreach (int uneNote in notesClient)
             {
-                valeurNotes.Add(db.NotesClients.Where(x => x.noteID == uneNote).Select(x => x.clientID).First());
+                //valeurNotes.Add(NotesClient.Where(x => x.noteID == uneNote).Select(x => x.note).First());
                 repartitionClient.Add(_serviceNotesClients.ListeNotesClient().Count(x => x.note == uneNote));
             }
 
