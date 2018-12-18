@@ -11,19 +11,19 @@ namespace ProjetCovoiturage.Models
     public class ApplicationUser : IdentityUser
     {
 
-        [Required(ErrorMessageResourceName = "FirstNameRequiredError", ErrorMessageResourceType = typeof(Resources.Models.IdentityModel))]
+       // [Required(ErrorMessageResourceName = "FirstNameRequiredError", ErrorMessageResourceType = typeof(Resources.Models.IdentityModel))]
         [Display(Name = "FirstName", ResourceType = typeof(Resources.Models.IdentityModel))]
         public string Firstname { get; set; }
 
-        [Required(ErrorMessageResourceName = "LastNameRequiredError", ErrorMessageResourceType = typeof(Resources.Models.IdentityModel))]
+   //     [Required(ErrorMessageResourceName = "LastNameRequiredError", ErrorMessageResourceType = typeof(Resources.Models.IdentityModel))]
         [Display(Name = "LastName", ResourceType = typeof(Resources.Models.IdentityModel))]
         public string Lastname { get; set; }
 
-        [Required(ErrorMessageResourceName = "CityRequiredError", ErrorMessageResourceType = typeof(Resources.Models.IdentityModel))]
+       // [Required(ErrorMessageResourceName = "CityRequiredError", ErrorMessageResourceType = typeof(Resources.Models.IdentityModel))]
         [Display(Name = "City", ResourceType = typeof(Resources.Models.IdentityModel))]
         public string Ville { get; set; }
 
-        [Required(ErrorMessageResourceName = "AgeRequiredError", ErrorMessageResourceType = typeof(Resources.Models.IdentityModel))]
+       // [Required(ErrorMessageResourceName = "AgeRequiredError", ErrorMessageResourceType = typeof(Resources.Models.IdentityModel))]
         [Display(Name = "Age", ResourceType = typeof(Resources.Models.IdentityModel))]
         public string Age { get; set; }
 

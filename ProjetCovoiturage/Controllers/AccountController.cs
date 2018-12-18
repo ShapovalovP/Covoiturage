@@ -218,6 +218,8 @@ namespace ProjetCovoiturage.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                 //   bd.Trajets.Where(x => x.Id == 0).FirstOrDefault().Chauffeur.Voiture.Where(x => x.VoitureID == 1).FirstOrDefault().nbPlace;
+                  //  bd.Trajets.Where(x => x.Id == 0).FirstOrDefault().Client.Count();
                     var currentUser = UserManager.Users.Where(x => x.Email == model.Email).FirstOrDefault();
                     
                     Chauffeur chauffeur = new Chauffeur { Email=model.Email, Prenom = model.Prenom, Nom = model.Nom, DateEmbauche = model.DateEmbauche, DatePermis = model.DatePermis, NumeroPermis = model.NumeroPermis, NumeroTelephone = model.NumeroTelephone, Ville = model.Ville,Voiture=new List<Voiture>(),Public=model.Public};
