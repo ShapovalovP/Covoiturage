@@ -242,6 +242,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NotesChauffeurs.cs" />
+    <Compile Include="Models\NotesClient.cs" />
     <Compile Include="Models\Trajet.cs" />
     <Compile Include="Models\TrajetHeureDate.cs" />
     <Compile Include="Models\Voiture.cs" />
@@ -421,10 +422,12 @@
     </Compile>
     <Compile Include="Services\IServiceChauffeur.cs" />
     <Compile Include="Services\IServiceClient.cs" />
+    <Compile Include="Services\IServiceNotesClients.cs" />
     <Compile Include="Services\IServiceTrajet.cs" />
     <Compile Include="Services\IServiceVoiture.cs" />
     <Compile Include="Services\ServiceChauffeur.cs" />
     <Compile Include="Services\ServiceClient.cs" />
+    <Compile Include="Services\ServiceNotesClients.cs" />
     <Compile Include="Services\ServiceTrajet.cs" />
     <Compile Include="Services\ServiceVoiture.cs" />
     <Compile Include="Startup.cs" />
@@ -604,6 +607,8 @@
     <Content Include="obj\Debug\ProjetCovoiturage.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\ProjetCovoiturage.csprojAssemblyReference.cache" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -661,6 +666,7 @@
     <Content Include="Views\NotesChauffeurs\Index.cshtml" />
     <Content Include="Views\Account\RegisterChauffeur.cshtml" />
     <Content Include="Views\Account\RegisterClient.cshtml" />
+    <Content Include="Views\Trajets\Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\bin\en\" />

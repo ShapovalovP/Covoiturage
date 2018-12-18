@@ -1,0 +1,127 @@
+﻿<html>
+
+<head>
+    <script src="~/Scripts/Chart.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <style>
+        #chart_container {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+
+    <h1>Les Notes des Clients</h1>
+
+    <div id="chart_container">
+        <canvas id="pie_chart_NotesClients"></canvas>
+    </div>
+
+    @*<h1>Cette Semaine</h1>
+
+    <div id="chart_container">
+        <canvas id="pie_chart_Semaine"></canvas>
+    </div>
+
+    <h1>Ce Mois</h1>
+
+    <div id="chart_container">
+        <canvas id="pie_chart_Mois"></canvas>
+    </div>*@
+
+    <script>
+
+            var repArrayClient = @Html.Raw(Json.Encode(ViewBag.RepClient));
+            var notesClient = @Html.Raw(Json.Encode(ViewBag.NoteClient));
+
+            var ctx = $("#pie_chart_Jour");
+
+            var pieChartJour = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: notesClient,
+                    datasets: [{
+                        label: "Pie Chart Notes Clients",
+                        data: repArrayClient,
+                        backgroundColor: ["#ff0000", "#0000E6", "#008000", "#f2f40b", "#c8a2c8", "#ffe2e4", "#5000ff"],
+                        borderColor: ["#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000"],
+                        borderWidth: 5
+                    }],
+                },
+                options: {
+                    cutoutPercentage: 0,
+                    responsive: true
+
+                },
+            });
+
+            @*//-----------------------------------------
+
+            var repArraySemaine = @Html.Raw(Json.Encode(ViewBag.RepSemaine));
+            var emotionsSemaine = @Html.Raw(Json.Encode(ViewBag.EmotionsSemaine));
+
+            var ctx = $("#pie_chart_Semaine");
+
+            var pieChartSemaine = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: emotionsSemaine,
+                    datasets: [{
+                        label: "Pie Chart Emotions",
+                        data: repArraySemaine,
+                        backgroundColor: ["#ff0000", "#0000E6", "#008000", "#f2f40b", "#c8a2c8", "#ffe2e4", "#5000ff"],
+                        borderColor: ["#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000"],
+                        borderWidth: 5
+                    }],
+                },
+                options: {
+                    cutoutPercentage: 0,
+                    responsive: true
+
+                },
+            });
+
+
+            //-----------------------------------------
+
+            var repArrayMois = @Html.Raw(Json.Encode(ViewBag.RepMois));
+            var emotionsMois = @Html.Raw(Json.Encode(ViewBag.EmotionsMois));
+
+            var ctx = $("#pie_chart_Mois");
+
+            var pieChartMois = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: emotionsMois,
+                    datasets: [{
+                        label: "Pie Chart Emotions",
+                        data: repArrayMois,
+                        backgroundColor: ["#ff0000", "#0000E6", "#008000", "#f2f40b", "#c8a2c8", "#ffe2e4", "#5000ff"],
+                        borderColor: ["#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000"],
+                        borderWidth: 5
+                    }],
+                },
+                options: {
+                    cutoutPercentage: 0,
+                    responsive: true
+
+                },
+            });*@
+
+
+    </script>
+
+
+
+</body>
+
+
+</html>
+
+

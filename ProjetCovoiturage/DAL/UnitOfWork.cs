@@ -13,6 +13,7 @@ namespace ProjetCovoiturage.DAL
         private GenericRepository<Trajet> trajetRepository;
         private GenericRepository<Voiture> voitureRepository;
         private GenericRepository<NotesChauffeurs> notesChauffeursRepository;
+        private GenericRepository<NotesClient> notesClientsRepository;
 
         private ApplicationDbContext context = new ApplicationDbContext();
 
@@ -23,6 +24,18 @@ namespace ProjetCovoiturage.DAL
 
         public UnitOfWork()
         {
+        }
+
+        public GenericRepository<NotesClient> NotesClientsRepository
+        {
+            get
+            {
+                if (this.notesClientsRepository == null)
+                {
+                    this.notesClientsRepository = new GenericRepository<NotesClient>(context);
+                }
+                return notesClientsRepository;
+            }
         }
 
         public GenericRepository<Chauffeur> ChauffeurRepository

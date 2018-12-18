@@ -22,6 +22,8 @@ namespace ProjetCovoiturage.Controllers
         public UnitOfWork uow = new UnitOfWork();
         private IServiceTrajet _st;
 
+        private IServiceNotesClients _serviceNotesClients;
+
         public TrajetsController(IServiceTrajet pst)
         {
             _st = pst;
@@ -268,6 +270,30 @@ namespace ProjetCovoiturage.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult Dashboard()
+        {
+            List<int> repartitionClient = new List<int>();
+            IQueryable<int> notesClient = from e in db.NotesClients
+                                        orderby e.note descending
+                                        select e.note;
+
+            List<int> valeurNotes = new List<int>();
+
+            foreach (int uneNote in notesClient)
+            {
+                valeurNotes.Add(db.NotesClients.Where(x => x.noteID == uneNote).Select(x => x.clientID).First());
+                repartitionClient.Add(_serviceNotesClients.ListeNotesClient().Count(x => x.note == uneNote));
+            }
+
+            var repClient = repartitionClient;
+
+
+            ViewBag.NoteClient = valeurNotes;
+            ViewBag.RepClient = repClient;
+
+            return View();
         }
     }
 }

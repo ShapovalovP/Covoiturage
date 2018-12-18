@@ -56,5 +56,7 @@ namespace ProjetCovoiturage.Models
         public virtual DbSet<Voiture> Voitures { get; set; }
 
         public virtual DbSet<NotesChauffeurs> NotesChauffeurs { get; set; }
+
+        public virtual DbSet<NotesClient> NotesClients { get; set; }
     }
 }
