@@ -110,34 +110,24 @@ namespace ProjetCovoiturage.Controllers
             }
             else
             {
-                //enleve une place
+                string userId = User.Identity.GetUserId();
+                //ENLEVER UNE PLACE DANS LE TRAJET
                 int nbPlaceRestant = trajetCourrent.PlaceRestante - 1;
-
-                //Trajet NouveauTrajet = trajetCourrent;
-                //NouveauTrajet.PlaceRestante = nbPlaceRestant;
-                //uow.TrajetRepository.Delete(trajetCourrent);
-                db.Trajets.Remove(trajetCourrent);
-                db.SaveChanges();
-
                 trajetCourrent.PlaceRestante = nbPlaceRestant;
-
-                //uow.TrajetRepository.Update(trajetCourrent);
-                //db.Entry(trajetCourrent).State = EntityState.Modified;
-                //db.SaveChanges();
-
-                db.Trajets.Add(trajetCourrent);
+                db.Entry(trajetCourrent).State = EntityState.Modified;
                 db.SaveChanges();
-
-
-
+                //MOFICICATIONS A TABLE CLIENT SI BESOIN
+                Client test = db.Clients.Where(s => s.UserId == userId).FirstOrDefault();
+                if (test == null)
+                {
+                    db.Clients.Add(new Client { UserId = User.Identity.GetUserId() });
+                    db.SaveChanges();
+                }
+                //MODIFICATION TABLE 
+                Client clientCourrant = db.Clients.Where(s => s.UserId == userId).FirstOrDefault();
+                db.ClientTrajets.Add(new ClientsTrajets { Client_ClientID = clientCourrant.ClientID, Trajet_Id = trajetCourrent.Id });
                 db.SaveChanges();
             }
-
-
-
-            //Add trajet si good conditions
-
-
             TempData["shortMessage"] = "Reservation faite";
 
 
