@@ -311,13 +311,13 @@
         }
     </div>
     <button>
-        @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Book, "ReserverPlace", new { x = ViewBag.idTrajet })
+        @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Book, "ReserverPlace", new { trajetID = ViewBag.idTrajet })
         @ViewBag.idTrajet
     </button>
-    @ViewBag.Message
     <button>
-        @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Cancel, "CancellerReservation", new { x = ViewBag.idTrajet })
+        @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Cancel, "CancellerReservation", new { trajetID = ViewBag.idTrajet })
     </button>
+    @ViewBag.Message
     <p>
         @Html.ActionLink(ProjetCovoiturage.Resources.Views.Trajet.Back, "FiltreTrajets")
     </p>
