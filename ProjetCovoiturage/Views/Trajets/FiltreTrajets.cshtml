@@ -114,7 +114,7 @@
                     @Html.DisplayFor(modelItem => item.HeureArrivee)
                 </td>
                 <td>
-                    @if (ViewBag.Delete == ProjetCovoiturage.Resources.Views.Trajet.Delete)
+                    @if (ViewBag.Delete == "Delete")
                     {
                         if (item.Chauffeur.Email == ViewBag.Name)
                         {
