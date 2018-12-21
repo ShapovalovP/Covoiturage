@@ -104,6 +104,7 @@ namespace ProjetCovoiturage.Controllers
                     trajetCourrent = item;
                 }
             }
+            
             if (trajetCourrent.PlaceRestante == 0)
             {
                 TempData["shortMessage"] = "Aucune place disponible pour le trajet";
@@ -136,7 +137,7 @@ namespace ProjetCovoiturage.Controllers
 
                     //MODIFICATION TABLE ClientsTrajets
                     Client clientCourrant = db.Clients.Where(s => s.UserId == userId).FirstOrDefault();
-                    db.ClientTrajets.Add(new ClientsTrajets { Client_ClientID = clientCourrant.ClientID, Trajet_Id = trajetCourrent.Id });
+                    db.ClientTrajets.Add(new ClientsTrajets { Client_ClientID = clientCourrant.ClientID, Trajet_Id = trajetCourrent.Id , IsPayed = false});
                     db.SaveChanges();
                     TempData["shortMessage"] = "Reservation faite";
                 }              
@@ -159,6 +160,13 @@ namespace ProjetCovoiturage.Controllers
                     //check conditions
                     trajetCourrent = item;
                 }
+            }
+            //Check si peut canceller la reservation
+            Double hours = (trajetCourrent.HeureDepart - DateTime.Now).TotalHours;
+            if (24 < hours)
+            {
+                TempData["shortMessage"] = "Il est trop tard pour annuler le trajet";
+                return RedirectToAction("VMChauffeurDeTrajet", trajetID);
             }
             //Check si la place est deja reservée
             Client client = db.Clients.Where(sx => sx.UserId == userId).FirstOrDefault();

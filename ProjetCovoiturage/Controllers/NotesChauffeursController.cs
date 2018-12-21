@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using ProjetCovoiturage.Models;
 
 namespace ProjetCovoiturage.Controllers
@@ -39,6 +40,7 @@ namespace ProjetCovoiturage.Controllers
         // GET: NotesChauffeurs/Create
         public ActionResult Create()
         {
+           
             ViewBag.chauffeurId = new SelectList(db.Chauffeur, "Id", "Prenom");
             return View();
         }

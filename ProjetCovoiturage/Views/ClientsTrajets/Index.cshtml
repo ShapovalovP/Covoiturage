@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ProjetCovoiturage.Models.ClientsTrajets>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.trajet.VilleDepart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trajet.VilleDestination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsPayed)
+        </th>
+        <th>
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.trajet.VilleDepart)
+        </td>
+        <th>
+            @Html.DisplayFor(model => item.trajet.VilleDestination)
+        </th>
+        <th>
+            @Html.DisplayFor(model => item.IsPayed)
+        </th>
+        <td>
+            @Html.ActionLink("Payer", "Payer", new {  idClient = item.Client_ClientID  , idTrajet = item.Trajet_Id}) 
+        </td>
+    </tr>
+}
+
+</table>

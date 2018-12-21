@@ -12,6 +12,7 @@ namespace ProjetCovoiturage.Models
 
         public int Client_ClientID { get; set; }
 
+        public Boolean IsPayed { get; set; }
 
         public int Trajet_Id { get; set; }
 

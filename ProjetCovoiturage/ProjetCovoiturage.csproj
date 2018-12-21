@@ -233,6 +233,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClientsTrajetsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NotesChauffeursController.cs" />
@@ -698,6 +699,7 @@
     <Content Include="Views\NotesClients\Index.cshtml" />
     <Content Include="Views\NotesClients\StatsClients.cshtml" />
     <Content Include="Views\NotesClients\StatsVille.cshtml" />
+    <Content Include="Views\ClientsTrajets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\bin\en\" />
